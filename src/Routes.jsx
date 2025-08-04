@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { HashRouter,Routes, Route } from "react-router-dom";
 import AnimatedText from "./components/name.jsx";
 import Resume from "./routes/Resume.jsx";
 import Education from "./routes/Education.jsx";
 import CliButton from "./components/CliButton.jsx";
 import WebTerminal from "./components/WebTerminal.jsx";
 import ProfileImage from "./components/ProfileImage.jsx";
-
 
 
 // Placeholder components for the other pages
@@ -147,11 +146,13 @@ const Contact = ({ isDarkMode }) => (
  */
 export default function AppRoutes({ isDarkMode }) {
   return (
+    <HashRouter>
     <Routes>
       <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
       <Route path="/education" element={<Education isDarkMode={isDarkMode} />}/>
       <Route path="/resume" element={<Resume isDarkMode={isDarkMode} />} />
       {/* Add other routes here */}
     </Routes>
+    </HashRouter>
   );
 }
