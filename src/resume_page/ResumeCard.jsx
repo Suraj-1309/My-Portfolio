@@ -117,7 +117,7 @@ export default function ResumeCard({ isDarkMode }) {
             </svg>
           </button>
           <button
-            onClick={() => scrollToSection("achievements")}
+            onClick={() => scrollToSection("achievement")}
             className="group flex items-center justify-between gap-4 text-left px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300 shadow-md"
           >
             <span className="text-sm font-bold text-gray-700 dark:text-gray-300 group-hover:text-red-600 dark:group-hover:text-blue-400">
@@ -346,7 +346,7 @@ export default function ResumeCard({ isDarkMode }) {
           </section>
 
           {/* Achievements Section */}
-          <section id="achievements" className="mb-8 scroll-mt-48">
+          <section id="achievement" className="mb-8 scroll-mt-48">
             <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 border-b-2 border-orange-500 pb-1 mb-4">
               ACHIEVEMENTS
             </h2>

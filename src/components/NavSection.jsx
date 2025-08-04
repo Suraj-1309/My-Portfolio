@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import ToggleBgButton from "./ToggleBgButton";
+import { HashLink } from "react-router-hash-link";
 
 export default function NavSection({ isDarkMode, toggleDarkMode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,20 +9,19 @@ export default function NavSection({ isDarkMode, toggleDarkMode }) {
   const isDesktop = useMediaQuery({ minWidth: 768 });
 
   const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Education", href: "/education" },
-  { name: "Experience", href: "#experience" },
-  { name: "DSA", href: "#dsa" },
-  { name: "Achievements", href: "#achievements" },
-  { name: "Contact", href: "#contact" },
-  { name: "Resume", href: "/resume" }
-];
-
+    { name: "Home", href: "/" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Education", href: "/education" },
+    { name: "Experience", href: "/experience" },
+    { name: "DSA", href: "#dsa" },
+    { name: "Achievements", href: "/#achievements" },
+    { name: "Contact", href: "/#contact" },
+    { name: "Resume", href: "/resume" },
+  ];
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 left-0 w-full z-40 p-3 h-16 transition-colors duration-300 border-b border-gray-200 dark:border-gray-700
         ${isDarkMode ? "bg-black" : "bg-white"}
       `}
@@ -38,23 +38,42 @@ export default function NavSection({ isDarkMode, toggleDarkMode }) {
             <ul className="flex items-center space-x-8">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className={`
-                      relative font-semibold cursor-pointer transition-colors duration-300
-                      ${
-                        activeLink === link.name
-                          ? "text-orange-500"
-                          : "text-gray-500 hover:text-orange-500 dark:text-gray-200 dark:hover:text-orange-500"
-                      }
-                    `}
-                    onClick={() => setActiveLink(link.name)}
-                  >
-                    {link.name}
-                  </a>
+                  {link.href.includes("#") ? (
+                    <HashLink
+                      smooth
+                      to={link.href}
+                      className={`
+            relative font-semibold cursor-pointer transition-colors duration-300
+            ${
+              activeLink === link.name
+                ? "text-orange-500"
+                : "text-gray-500 hover:text-orange-500 dark:text-gray-200 dark:hover:text-orange-500"
+            }
+          `}
+                      onClick={() => setActiveLink(link.name)}
+                    >
+                      {link.name}
+                    </HashLink>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className={`
+            relative font-semibold cursor-pointer transition-colors duration-300
+            ${
+              activeLink === link.name
+                ? "text-orange-500"
+                : "text-gray-500 hover:text-orange-500 dark:text-gray-200 dark:hover:text-orange-500"
+            }
+          `}
+                      onClick={() => setActiveLink(link.name)}
+                    >
+                      {link.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
+
             <ToggleBgButton isDark={isDarkMode} toggleTheme={toggleDarkMode} />
           </div>
         ) : (
@@ -102,11 +121,7 @@ export default function NavSection({ isDarkMode, toggleDarkMode }) {
               className={`
                 fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 shadow-lg
                 transition-transform duration-500 ease-in-out transform
-                ${
-                  isMenuOpen
-                    ? "translate-x-0"
-                    : "-translate-x-full"
-                }
+                ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}
                 p-6 flex flex-col items-start justify-start
               `}
             >
@@ -130,27 +145,48 @@ export default function NavSection({ isDarkMode, toggleDarkMode }) {
                   ></path>
                 </svg>
               </button>
-              
+
               <ul className="flex flex-col mt-16 space-y-4">
                 {navLinks.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className={`
-                        text-xl font-semibold cursor-pointer transition-colors duration-300
-                        ${
-                          activeLink === link.name
-                            ? "text-orange-500"
-                            : "text-gray-700 hover:text-orange-500 dark:text-gray-200 dark:hover:text-orange-500"
-                        }
-                      `}
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        setActiveLink(link.name);
-                      }}
-                    >
-                      {link.name}
-                    </a>
+                    {link.href.includes("#") ? (
+                      <HashLink
+                        smooth
+                        to={link.href}
+                        className={`
+            text-xl font-semibold cursor-pointer transition-colors duration-300
+            ${
+              activeLink === link.name
+                ? "text-orange-500"
+                : "text-gray-700 hover:text-orange-500 dark:text-gray-200 dark:hover:text-orange-500"
+            }
+          `}
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          setActiveLink(link.name);
+                        }}
+                      >
+                        {link.name}
+                      </HashLink>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className={`
+            text-xl font-semibold cursor-pointer transition-colors duration-300
+            ${
+              activeLink === link.name
+                ? "text-orange-500"
+                : "text-gray-700 hover:text-orange-500 dark:text-gray-200 dark:hover:text-orange-500"
+            }
+          `}
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          setActiveLink(link.name);
+                        }}
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

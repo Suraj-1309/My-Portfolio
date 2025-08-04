@@ -16,7 +16,9 @@ export default function ProfileImage({ isDarkMode }) { // Added isDarkMode prop
       <img
         src={profileImage} // IMPORTANT: Replace with the actual path to your image
         alt="Suraj"
-        className="rounded-3xl object-cover h-full w-full border border-white"
+        className={`rounded-3xl object-cover h-full w-full border-4 ${
+          isDarkMode ? "border-white" : "border-black"
+        }`}
       />
 
       {/* Overlay for "IMG.JPG" text and an image SVG icon */}
