@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,500,400&display=swap');
+
+.font-cabinet {
+  font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+/* Add this block for selected text styling */
+::selection {
+  background-color: #f97316; /* Tailwind's orange-500 */
+  color: white;             /* Make the selected text white for better contrast */
+}
+
+/* For Firefox compatibility */
+::-moz-selection {
+  background-color: #f97316;
+  color: white;
+}
+
+
+/* Keep any other custom CSS you have below these rules */
+
+.light-mode {
+  color: #000000;
+}
+
+.dark-mode {
+  color: #f8f8f8;
+}
+
+/* NEW: Define a style for the custom cursor. You can adjust the size, color, and border here. */
+.custom-cursor {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  background-color: transparent; /* Changed to transparent */
+  border: 1px solid #ff7e5f; /* Border color */
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: width 0.2s, height 0.2s;
+}
+
+/* Added: A new class for the small dot in the center */
+.custom-cursor-dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #ff7e5f; /* Color of the dot */
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure the dot is on top of the circle */
+}
+
+.custom-cursor-grow {
+  width: 50px;
+  height: 50px;
+}
