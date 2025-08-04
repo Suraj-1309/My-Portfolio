@@ -5,6 +5,7 @@ import Resume from "./routes/Resume.jsx";
 import Education from "./routes/Education.jsx";
 import CliButton from "./components/CliButton.jsx";
 import WebTerminal from "./components/WebTerminal.jsx";
+import ProfileImage from "./components/ProfileImage.jsx";
 
 
 
@@ -13,20 +14,70 @@ const Home = ({ isDarkMode }) => {
   const [showCli, setShowCli] = useState(false);
   const toggleCli = () => setShowCli((prev) => !prev);
 
-  return (
-    <div>
-      {/* Your home content */}
-      <div className="pt-1 sm:pt-10">
+return (
+    // Main container for the Home page: sets background, min height, and general padding
+    <div className={`p-4 ${isDarkMode ? "bg-black" : "bg-white"} min-h-screen transition-colors duration-300`}>
 
-      <AnimatedText text="suraj." isDarkMode={isDarkMode} />
+      {/* First Top Row: Two Columns */}
+      {/* On small screens (mobile), it will be a single column (stack vertically).
+          On medium screens (md) and larger, it will be two columns. */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-0"> {/* gap-4 adds space between columns and rows */}
+
+        {/* First Column for the Name */}
+        {/* order-2 for mobile to place it below CLI, order-1 for desktop to place it on left */}
+        <div className="order-2 md:order-1">
+          <div className="pt-0 sm:pt-5"> {/* Keep name slightly above */}
+            <AnimatedText text="suraj." isDarkMode={isDarkMode} />
+          </div>
+        </div>
+
+        {/* Second Column for Activate CLI Button */}
+        {/* order-1 for mobile to place it above name, order-2 for desktop to place it on right */}
+        <div className="order-2 md:order-2 p-4">
+          <div
+            className={`p-4 
+                       `} // Card styling
+          >
+            <CliButton toggleCli={toggleCli} isDarkMode={isDarkMode} />
+          </div>
+        </div>
       </div>
 
-      <div className="absolute bottom-10 left-10 flex flex-col sm:flex-row gap-4 items-center">
-        <CliButton toggleCli={toggleCli} />
+      {/* Second Row: Three Columns */}
+      {/* On small screens, it will be a single column.
+          On medium screens and larger, it will be three columns. */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2"> {/* mt-8 adds margin from the row above */}
+        {/* Column 1 Placeholder */}
+        <div className={`p-4 rounded-xl shadow-lg ${isDarkMode ? "bg-gray-800" : "bg-gray-100"} h-32 flex items-center justify-center`}>
+          <p className={`${isDarkMode ? "text-white" : "text-gray-700"}`}>Column 1 Content</p>
+        </div>
+        {/* Column 2 Placeholder */}
+        <div className={`w-[calc(100%-40px)] m-8 -mt-8`}>
+
+
+          <ProfileImage />
+        </div>
+        {/* Column 3 Placeholder */}
+        <div className={`p-4 rounded-xl shadow-lg ${isDarkMode ? "bg-gray-800" : "bg-gray-100"} h-32 flex items-center justify-center`}>
+          <p className={`${isDarkMode ? "text-white" : "text-gray-700"}`}>Column 3 Content</p>
+        </div>
       </div>
-      {showCli && <WebTerminal onClose={toggleCli} />
-      
-      }
+
+      {/* You can add more rows below using similar grid structures */}
+      {/* Example: Third Row - Two Columns */}
+      {/*
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        <div className={`p-4 rounded-xl shadow-lg ${isDarkMode ? "bg-gray-800" : "bg-gray-100"} h-48 flex items-center justify-center`}>
+          <p className={`${isDarkMode ? "text-white" : "text-gray-700"}`}>Another Section Left</p>
+        </div>
+        <div className={`p-4 rounded-xl shadow-lg ${isDarkMode ? "bg-gray-800" : "bg-gray-100"} h-48 flex items-center justify-center`}>
+          <p className={`${isDarkMode ? "text-white" : "text-gray-700"}`}>Another Section Right</p>
+        </div>
+      </div>
+      */}
+
+      {/* WebTerminal component, shown only when showCli is true */}
+      {showCli && <WebTerminal onClose={toggleCli} />}
     </div>
   );
 };

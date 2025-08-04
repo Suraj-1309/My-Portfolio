@@ -54,14 +54,17 @@ const AnimatedText = ({ text, isDarkMode }) => {
         // Adjust for desired vertical offset from the top of 'j'
         // This will place the bubble's bottom edge a certain distance above the 'j'
         const verticalOffset = -greetingRect.height - 10; // Adjust -10 for desired space between bubble bottom and 'j' top
-        
+
         // Calculate horizontal position to center the greeting bubble above 'j'
         // This centers the greeting bubble's *center* over 'j's *center*
-        const horizontalOffset = (jLetterRect.left - containerRect.left) + (jLetterRect.width / 2) - (greetingRect.width / 2);
-
+        const horizontalOffset =
+          jLetterRect.left -
+          containerRect.left +
+          jLetterRect.width / 2 -
+          greetingRect.width / 2;
 
         setGreetingPosition({
-          top: (jLetterRect.top - containerRect.top) + verticalOffset,
+          top: jLetterRect.top - containerRect.top + verticalOffset,
           left: horizontalOffset,
         });
       }
@@ -128,7 +131,7 @@ const AnimatedText = ({ text, isDarkMode }) => {
             }`}
             onClick={(event) => handleLetterClick(index, event)}
             // Attach ref to the 'j' letter. For "suraj.", 'j' is at index 4 (0-indexed)
-            ref={letter === 'j' && index === 4 ? jLetterRef : null}
+            ref={letter === "j" && index === 4 ? jLetterRef : null}
           >
             {letter}
           </h1>
@@ -137,26 +140,36 @@ const AnimatedText = ({ text, isDarkMode }) => {
 
       {/* Greeting message container */}
       <div
-        // Tailwind classes for the main bubble appearance
-        className={`absolute py-2 px-2 font-semibold shadow-lg transition-opacity duration-500
-                    rounded-[50px] /* Using arbitrary value for 50px border-radius */
-                    ${
-                      isDarkMode
-                        ? "bg-blue-400 text-white"
-                        : "bg-orange-500 text-white"
-                    }
-                    sm:text-lg 
-                    speech-bubble-tail /* This class will handle the ::after pseudo-element */
-                    `}
+        className={`absolute font-semibold shadow-lg transition-opacity duration-500
+              rounded-[50px] px-5 py-3 text-white sm:text-lg
+              ${isDarkMode ? "bg-blue-400" : "bg-orange-500"}`}
         style={{
           top: greetingPosition.top + 20,
           left: greetingPosition.left + 100,
           whiteSpace: "nowrap",
-          zIndex: 20, // Ensure it's above other content and elements like the navbar
+          zIndex: 20,
         }}
-        ref={greetingRef} // Attach ref to the greeting bubble
+        ref={greetingRef}
       >
-        {greeting}
+        <span>{greeting}</span>
+
+        {/* Curved SVG Tail */}
+        <svg
+          className="absolute"
+          style={{
+            bottom: -12,
+            left: 24,
+            width: 24,
+            height: 24,
+          }}
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,24 C6,-4 14,-4 24,0"
+            fill={isDarkMode ? "#60a5fa" : "#f97316"} // Tail color to match bubble
+          />
+        </svg>
       </div>
     </div>
   );
