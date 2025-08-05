@@ -1,6 +1,6 @@
 import React from "react";
-import profileImageWhite from "../.pics/experience_white.png";
-import profileImageBlack from "../.pics/experience_Black.png";
+import profileImageWhite from "../pics/experience_white.png";
+import profileImageBlack from "../pics/experience_Black.png";
 
 export default function Experience({ isDarkMode }) {
   return (

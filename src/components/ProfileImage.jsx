@@ -1,6 +1,6 @@
 // src/components/ProfileImage.jsx
 import React from "react";
-import profileImage from "../.pics/img.jpeg";
+import profileImage from "../pics/img.jpeg";
 
 export default function ProfileImage({ isDarkMode }) { // Added isDarkMode prop
   return (
