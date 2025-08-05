@@ -25,7 +25,7 @@ export default function App() {
     <div
       className={`min-h-screen w-full relative transition-colors duration-300
         ${isDarkMode ? "text-white bg-black" : "text-black bg-white"}
-        pt-16 px-4 py-6 sm:px-8 sm:py-10
+        pt-16 px- py-6 sm:px-8 sm:py-10
       `}
     >
       <CustomCursor />
@@ -34,7 +34,7 @@ export default function App() {
       <NavSection isDarkMode={isDarkMode} toggleDarkMode={toggleTheme} />
 
 
-      <div className="pt-8">
+      <div className="pt-8 w-full">
         <AppRoutes isDarkMode={isDarkMode} />
       </div>
     </div>

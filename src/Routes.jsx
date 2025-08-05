@@ -13,6 +13,10 @@ import ContactRedirect from "./routes/ContactRedirect.jsx";
 import Experience from "./routes/Experience.jsx";
 import Achievements from "./routes/Achievements.jsx";
 import WorldMap from "./Footer/WorldMap.jsx";
+import MotoStrip from "./components/MotoStrip.jsx";
+import DsaHeading from "./components/DsaHeading.jsx";
+import DsaRight from "./components/DsaRight.jsx";
+import DsaLeft from "./components/DsaLeft.jsx";
 // Placeholder components for the other pages
 
 const Home = ({ isDarkMode }) => {
@@ -85,6 +89,33 @@ const Home = ({ isDarkMode }) => {
         </div>
       </div>
 
+      {/* Third Row: DSA Record Section */}
+      <div className="mt-8 pb-8">
+        {/* DSA Heading */}
+        <DsaHeading />
+
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4">
+          {/* Left Side: 2/3 width */}
+          <div className="lg:col-span-2 p-6 rounded-2xl shadow-md ">
+            {/* TODO: Add DSA Record card content here */}
+            <DsaLeft isDarkMode={isDarkMode} />
+
+          </div>
+
+          {/* Right Side: 1/3 width */}
+          <div className="hidden lg:flex lg:col-span-1 p-4  flex justify-end items-center">
+            {/* TODO: Add right-side widget or content */}
+            <DsaRight isDarkMode={isDarkMode}/>
+          </div>
+        </div>
+      </div>
+
+      {/* MotoStrip Component */}
+      <div className="relative z-0 w-screen">
+        <MotoStrip isDarkMode={isDarkMode} />
+      </div>
+
       {/* achievements */}
       <div
         id="achievements"
@@ -116,13 +147,11 @@ const Home = ({ isDarkMode }) => {
             </div>
           </div>
 
-
           {/* World Map Component */}
           <div className="w-full mt-8 relative z-0">
             <WorldMap />
           </div>
 
-          
           {/* ✅ FooterEnd now INSIDE the z-10 container */}
           <div className="col-span-1 md:col-span-2 mt-4">
             <FooterEnd isDarkMode={isDarkMode} />
