@@ -33,40 +33,9 @@ export default function LanguageSkills({ isDarkMode }) {
     title: "C Programming",
     experience: "2+ years",
     usedIn: "College Study, DSA",
-    points: [
-      {
-        point: "Solved 600+ challenges on LeetCode",
-        article: {
-          heading: "Mastering LeetCodeing",
-          subheadings: [
-            {
-              title: "Dynamic Programming",
-              text: "Solved 150+ problems focused on dynamic programming, including knapsack, LIS, and memoization techniques.",
-            },
-            {
-              title: "Graph Theory",
-              text: "Gained deep understanding of BFS, DFS, and shortest path algorithms by solving various graph-related challenges.",
-            },
-          ],
-          images: [
-            "https://example.com/images/leetcode1.png",
-            "https://example.com/images/leetcode2.png",
-          ],
-          check_it: "https://example.com/leetcode-masterclass",
-          link: [
-            {
-              linkname: "Dynamic Programming",
-              link: "https://example.com/dynamic-programming",
-            },
-            {
-              linkname: "Graph Theory",
-              link: "https://example.com/graph-theory",
-            },
-          ],
-        },
-      },
-    ],
   };
+
+
   const LanguageCpp = {
     leftIcon: (
       <FaCode
@@ -85,40 +54,9 @@ export default function LanguageSkills({ isDarkMode }) {
     title: "C++",
     experience: "1.5+ years",
     usedIn: "DSA,OOPs, Algorithms, Competitive Programming",
-    points: [
-      {
-        point: "Solved 600+ challenges on LeetCode",
-        article: {
-          heading: "Mastering LeetCodeing",
-          subheadings: [
-            {
-              title: "Dynamic Programming",
-              text: "Solved 150+ problems focused on dynamic programming, including knapsack, LIS, and memoization techniques.",
-            },
-            {
-              title: "Graph Theory",
-              text: "Gained deep understanding of BFS, DFS, and shortest path algorithms by solving various graph-related challenges.",
-            },
-          ],
-          images: [
-            "https://example.com/images/leetcode1.png",
-            "https://example.com/images/leetcode2.png",
-          ],
-          check_it: "https://example.com/leetcode-masterclass",
-          link: [
-            {
-              linkname: "Dynamic Programming",
-              link: "https://example.com/dynamic-programming",
-            },
-            {
-              linkname: "Graph Theory",
-              link: "https://example.com/graph-theory",
-            },
-          ],
-        },
-      },
-    ],
   };
+
+
   const LanguagePython = {
     leftIcon: (
       <FaCode
@@ -137,40 +75,10 @@ export default function LanguageSkills({ isDarkMode }) {
     title: "Python",
     experience: "1+ years",
     usedIn: "DSA,AIML, Data Science",
-    points: [
-      {
-        point: "Solved 600+ challenges on LeetCode",
-        article: {
-          heading: "Mastering LeetCodeing",
-          subheadings: [
-            {
-              title: "Dynamic Programming",
-              text: "Solved 150+ problems focused on dynamic programming, including knapsack, LIS, and memoization techniques.",
-            },
-            {
-              title: "Graph Theory",
-              text: "Gained deep understanding of BFS, DFS, and shortest path algorithms by solving various graph-related challenges.",
-            },
-          ],
-          images: [
-            "https://example.com/images/leetcode1.png",
-            "https://example.com/images/leetcode2.png",
-          ],
-          check_it: "https://example.com/leetcode-masterclass",
-          link: [
-            {
-              linkname: "Dynamic Programming",
-              link: "https://example.com/dynamic-programming",
-            },
-            {
-              linkname: "Graph Theory",
-              link: "https://example.com/graph-theory",
-            },
-          ],
-        },
-      },
-    ],
   };
+
+
+
   const LanguageJava = {
     leftIcon: (
       <FaCode
@@ -189,40 +97,9 @@ export default function LanguageSkills({ isDarkMode }) {
     title: "Java",
     experience: "1+ years",
     usedIn: "DSA,Android Development",
-    points: [
-      {
-        point: "Solved 600+ challenges on LeetCode",
-        article: {
-          heading: "Mastering LeetCodeing",
-          subheadings: [
-            {
-              title: "Dynamic Programming",
-              text: "Solved 150+ problems focused on dynamic programming, including knapsack, LIS, and memoization techniques.",
-            },
-            {
-              title: "Graph Theory",
-              text: "Gained deep understanding of BFS, DFS, and shortest path algorithms by solving various graph-related challenges.",
-            },
-          ],
-          images: [
-            "https://example.com/images/leetcode1.png",
-            "https://example.com/images/leetcode2.png",
-          ],
-          check_it: "https://example.com/leetcode-masterclass",
-          link: [
-            {
-              linkname: "Dynamic Programming",
-              link: "https://example.com/dynamic-programming",
-            },
-            {
-              linkname: "Graph Theory",
-              link: "https://example.com/graph-theory",
-            },
-          ],
-        },
-      },
-    ],
   };
+
+
   const LanguageJavascript = {
     leftIcon: (
       <FaCode
@@ -241,40 +118,9 @@ export default function LanguageSkills({ isDarkMode }) {
     title: "JavaScript",
     experience: "2+ years",
     usedIn: "Web Development",
-    points: [
-      {
-        point: "Solved 600+ challenges on LeetCode",
-        article: {
-          heading: "Mastering LeetCodeing",
-          subheadings: [
-            {
-              title: "Dynamic Programming",
-              text: "Solved 150+ problems focused on dynamic programming, including knapsack, LIS, and memoization techniques.",
-            },
-            {
-              title: "Graph Theory",
-              text: "Gained deep understanding of BFS, DFS, and shortest path algorithms by solving various graph-related challenges.",
-            },
-          ],
-          images: [
-            "https://example.com/images/leetcode1.png",
-            "https://example.com/images/leetcode2.png",
-          ],
-          check_it: "https://example.com/leetcode-masterclass",
-          link: [
-            {
-              linkname: "Dynamic Programming",
-              link: "https://example.com/dynamic-programming",
-            },
-            {
-              linkname: "Graph Theory",
-              link: "https://example.com/graph-theory",
-            },
-          ],
-        },
-      },
-    ],
   };
+
+  
   const LanguagePhp = {
     leftIcon: (
       <FaCode
@@ -293,39 +139,6 @@ export default function LanguageSkills({ isDarkMode }) {
     title: "PHP",
     experience: "1+ years",
     usedIn: "Web Development with Backend",
-    points: [
-      {
-        point: "Solved 600+ challenges on LeetCode",
-        article: {
-          heading: "Mastering LeetCodeing",
-          subheadings: [
-            {
-              title: "Dynamic Programming",
-              text: "Solved 150+ problems focused on dynamic programming, including knapsack, LIS, and memoization techniques.",
-            },
-            {
-              title: "Graph Theory",
-              text: "Gained deep understanding of BFS, DFS, and shortest path algorithms by solving various graph-related challenges.",
-            },
-          ],
-          images: [
-            "https://example.com/images/leetcode1.png",
-            "https://example.com/images/leetcode2.png",
-          ],
-          check_it: "https://example.com/leetcode-masterclass",
-          link: [
-            {
-              linkname: "Dynamic Programming",
-              link: "https://example.com/dynamic-programming",
-            },
-            {
-              linkname: "Graph Theory",
-              link: "https://example.com/graph-theory",
-            },
-          ],
-        },
-      },
-    ],
   };
 
   const dsaLanguages = [
@@ -358,23 +171,24 @@ export default function LanguageSkills({ isDarkMode }) {
 
       <div className="w-full px-8 pb-8">
         <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
-         {(showAll ? dsaLanguages : dsaLanguages.slice(0, 3)).map((lang, index) => (
-  <div
-    key={index}
-    className="transition-all duration-500 ease-in-out transform opacity-0 animate-fadeIn"
-  >
-    <SkillCard
-      leftIcon={lang.leftIcon}
-      rightIcon={lang.rightIcon}
-      title={lang.title}
-      experience={lang.experience}
-      usedIn={lang.usedIn}
-      isDarkMode={isDarkMode}
-      points={lang.points}
-      onSeeMore={() => alert("Show detailed skill page here")}
-    />
-  </div>
-))}
+          {(showAll ? dsaLanguages : dsaLanguages.slice(0, 3)).map(
+            (lang, index) => (
+              <div
+                key={index}
+                className="transition-all duration-500 ease-in-out transform opacity-0 animate-fadeIn"
+              >
+                <SkillCard
+                  leftIcon={lang.leftIcon}
+                  rightIcon={lang.rightIcon}
+                  title={lang.title}
+                  experience={lang.experience}
+                  usedIn={lang.usedIn}
+                  isDarkMode={isDarkMode}
+                  onSeeMore={() => alert("Show detailed skill page here")}
+                />
+              </div>
+            )
+          )}
         </div>
 
         {/* Show More Button */}
