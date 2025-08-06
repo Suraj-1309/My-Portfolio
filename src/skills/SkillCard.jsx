@@ -27,7 +27,7 @@ export default function SkillCard({
   return (
     <>
       <div
-        className={`relative w-full sm:w-[400px] rounded-2xl shadow-md p-4 sm:p-6 flex flex-col gap-2 transition-all duration-300 hover:scale-[1.08] ${cardBaseStyle} ${borderColor}`}
+        className={`relative w-full sm:w-[400px] rounded-2xl shadow-md p-4 sm:p-4 flex flex-col gap-2 transition-all duration-300 hover:scale-[1.08] ${cardBaseStyle} ${borderColor}`}
       >
         {/* Top row: Left icon + title + right icon */}
         <div className="flex items-center justify-between">
