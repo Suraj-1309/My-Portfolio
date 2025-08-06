@@ -1,41 +1,142 @@
-import React from "react";
-import SkillCard from "../skills/SkillCard";
-import { FaCode, FaReact } from "react-icons/fa";
-import { MdScreenshotMonitor } from "react-icons/md";
-import { FiTool } from "react-icons/fi";
-import { VscCopilot } from "react-icons/vsc";
+import React, { useState } from "react";
+
+import SkillCard from "./SkillCard";
+import { FaCode } from "react-icons/fa";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import {
-  SiHtml5,
-  SiCss3,
-  SiMysql,
-  SiMongodb,
-  SiGit,
-  SiJupyter,
+  SiC,
+  SiCplusplus,
+  SiJavascript,
+  SiPhp,
+  SiPython,
 } from "react-icons/si";
-import { FaDatabase } from "react-icons/fa6";
+import { FaJava } from "react-icons/fa";
 
+export default function LanguageSkills({ isDarkMode }) {
+  const [showAll, setShowAll] = useState(false);
 
-import LanguagesSkill from "../skills/LanguagesSkill";
-
-export default function Skills({ isDarkMode }) {
-  const LanguageHtml = {
+  const LanguageC = {
     leftIcon: (
-      <MdScreenshotMonitor
+      <FaCode
         className={`${
           isDarkMode ? "text-blue-400" : "text-orange-500"
         } text-3xl`}
       />
     ),
     rightIcon: (
-      <SiHtml5
+      <SiC
         className={`${
           isDarkMode ? "text-blue-400" : "text-orange-500"
         } text-3xl`}
       />
     ),
-    title: "HTML",
+    title: "C Programming",
+    experience: "2+ years",
+    usedIn: "College Study, DSA",
+    points: [
+      {
+        point: "Solved 600+ challenges on LeetCode",
+        article: {
+          heading: "Mastering LeetCodeing",
+          subheadings: [
+            {
+              title: "Dynamic Programming",
+              text: "Solved 150+ problems focused on dynamic programming, including knapsack, LIS, and memoization techniques.",
+            },
+            {
+              title: "Graph Theory",
+              text: "Gained deep understanding of BFS, DFS, and shortest path algorithms by solving various graph-related challenges.",
+            },
+          ],
+          images: [
+            "https://example.com/images/leetcode1.png",
+            "https://example.com/images/leetcode2.png",
+          ],
+          check_it: "https://example.com/leetcode-masterclass",
+          link: [
+            {
+              linkname: "Dynamic Programming",
+              link: "https://example.com/dynamic-programming",
+            },
+            {
+              linkname: "Graph Theory",
+              link: "https://example.com/graph-theory",
+            },
+          ],
+        },
+      },
+    ],
+  };
+  const LanguageCpp = {
+    leftIcon: (
+      <FaCode
+        className={`${
+          isDarkMode ? "text-blue-400" : "text-orange-500"
+        } text-3xl`}
+      />
+    ),
+    rightIcon: (
+      <SiCplusplus
+        className={`${
+          isDarkMode ? "text-blue-400" : "text-orange-500"
+        } text-3xl`}
+      />
+    ),
+    title: "C++",
+    experience: "1.5+ years",
+    usedIn: "DSA,OOPs, Algorithms, Competitive Programming",
+    points: [
+      {
+        point: "Solved 600+ challenges on LeetCode",
+        article: {
+          heading: "Mastering LeetCodeing",
+          subheadings: [
+            {
+              title: "Dynamic Programming",
+              text: "Solved 150+ problems focused on dynamic programming, including knapsack, LIS, and memoization techniques.",
+            },
+            {
+              title: "Graph Theory",
+              text: "Gained deep understanding of BFS, DFS, and shortest path algorithms by solving various graph-related challenges.",
+            },
+          ],
+          images: [
+            "https://example.com/images/leetcode1.png",
+            "https://example.com/images/leetcode2.png",
+          ],
+          check_it: "https://example.com/leetcode-masterclass",
+          link: [
+            {
+              linkname: "Dynamic Programming",
+              link: "https://example.com/dynamic-programming",
+            },
+            {
+              linkname: "Graph Theory",
+              link: "https://example.com/graph-theory",
+            },
+          ],
+        },
+      },
+    ],
+  };
+  const LanguagePython = {
+    leftIcon: (
+      <FaCode
+        className={`${
+          isDarkMode ? "text-blue-400" : "text-orange-500"
+        } text-3xl`}
+      />
+    ),
+    rightIcon: (
+      <SiPython
+        className={`${
+          isDarkMode ? "text-blue-400" : "text-orange-500"
+        } text-3xl`}
+      />
+    ),
+    title: "Python",
     experience: "1+ years",
-    usedIn: "Web Development Frontend",
+    usedIn: "DSA,AIML, Data Science",
     points: [
       {
         point: "Solved 600+ challenges on LeetCode",
@@ -70,24 +171,24 @@ export default function Skills({ isDarkMode }) {
       },
     ],
   };
-  const LanguageCss = {
+  const LanguageJava = {
     leftIcon: (
-      <MdScreenshotMonitor
+      <FaCode
         className={`${
           isDarkMode ? "text-blue-400" : "text-orange-500"
         } text-3xl`}
       />
     ),
     rightIcon: (
-      <SiCss3
+      <FaJava
         className={`${
           isDarkMode ? "text-blue-400" : "text-orange-500"
         } text-3xl`}
       />
     ),
-    title: "CSS",
+    title: "Java",
     experience: "1+ years",
-    usedIn: "Web Development Frontend",
+    usedIn: "DSA,Android Development",
     points: [
       {
         point: "Solved 600+ challenges on LeetCode",
@@ -122,24 +223,24 @@ export default function Skills({ isDarkMode }) {
       },
     ],
   };
-  const LanguageReact = {
+  const LanguageJavascript = {
     leftIcon: (
-      <MdScreenshotMonitor
+      <FaCode
         className={`${
           isDarkMode ? "text-blue-400" : "text-orange-500"
         } text-3xl`}
       />
     ),
     rightIcon: (
-      <FaReact
+      <SiJavascript
         className={`${
           isDarkMode ? "text-blue-400" : "text-orange-500"
         } text-3xl`}
       />
     ),
-    title: "React",
-    experience: "1 Month",
-    usedIn: "Web Development Frontend",
+    title: "JavaScript",
+    experience: "2+ years",
+    usedIn: "Web Development",
     points: [
       {
         point: "Solved 600+ challenges on LeetCode",
@@ -174,27 +275,24 @@ export default function Skills({ isDarkMode }) {
       },
     ],
   };
-
-  const frontendSkills = [LanguageHtml, LanguageCss, LanguageReact];
-
-  const DatabaseMysql = {
+  const LanguagePhp = {
     leftIcon: (
-      <FaDatabase
+      <FaCode
         className={`${
           isDarkMode ? "text-blue-400" : "text-orange-500"
         } text-3xl`}
       />
     ),
     rightIcon: (
-      <SiMysql
+      <SiPhp
         className={`${
           isDarkMode ? "text-blue-400" : "text-orange-500"
         } text-3xl`}
       />
     ),
-    title: "MySQL",
-    experience: "1+ Year",
-    usedIn: "Database Management",
+    title: "PHP",
+    experience: "1+ years",
+    usedIn: "Web Development with Backend",
     points: [
       {
         point: "Solved 600+ challenges on LeetCode",
@@ -230,300 +328,70 @@ export default function Skills({ isDarkMode }) {
     ],
   };
 
-  const DatabaseMongoDB = {
-    leftIcon: (
-      <FaDatabase
-        className={`${
-          isDarkMode ? "text-blue-400" : "text-orange-500"
-        } text-3xl`}
-      />
-    ),
-    rightIcon: (
-      <SiMongodb
-        className={`${
-          isDarkMode ? "text-blue-400" : "text-orange-500"
-        } text-3xl`}
-      />
-    ),
-    title: "MongoDB",
-    experience: "2 Months",
-    usedIn: "Web Development Database",
-    points: [
-      {
-        point: "Solved 600+ challenges on LeetCode",
-        article: {
-          heading: "Mastering LeetCodeing",
-          subheadings: [
-            {
-              title: "Dynamic Programming",
-              text: "Solved 150+ problems focused on dynamic programming, including knapsack, LIS, and memoization techniques.",
-            },
-            {
-              title: "Graph Theory",
-              text: "Gained deep understanding of BFS, DFS, and shortest path algorithms by solving various graph-related challenges.",
-            },
-          ],
-          images: [
-            "https://example.com/images/leetcode1.png",
-            "https://example.com/images/leetcode2.png",
-          ],
-          check_it: "https://example.com/leetcode-masterclass",
-          link: [
-            {
-              linkname: "Dynamic Programming",
-              link: "https://example.com/dynamic-programming",
-            },
-            {
-              linkname: "Graph Theory",
-              link: "https://example.com/graph-theory",
-            },
-          ],
-        },
-      },
-    ],
-  };
-  const databaseSkills = [DatabaseMysql, DatabaseMongoDB];
+  const dsaLanguages = [
+    LanguageC,
+    LanguageCpp,
+    LanguagePython,
+    LanguageJava,
+    LanguageJavascript,
+    LanguagePhp,
+  ];
 
-  const ToolsGit = {
-    leftIcon: (
-      <FiTool
-        className={`${
-          isDarkMode ? "text-blue-400" : "text-orange-500"
-        } text-3xl`}
-      />
-    ),
-    rightIcon: (
-      <SiGit
-        className={`${
-          isDarkMode ? "text-blue-400" : "text-orange-500"
-        } text-3xl`}
-      />
-    ),
-    title: "Git",
-    experience: "2 years",
-    usedIn: "Version Control on projects and for fun",
-    points: [
-      {
-        point: "Solved 600+ challenges on LeetCode",
-        article: {
-          heading: "Mastering LeetCodeing",
-          subheadings: [
-            {
-              title: "Dynamic Programming",
-              text: "Solved 150+ problems focused on dynamic programming, including knapsack, LIS, and memoization techniques.",
-            },
-            {
-              title: "Graph Theory",
-              text: "Gained deep understanding of BFS, DFS, and shortest path algorithms by solving various graph-related challenges.",
-            },
-          ],
-          images: [
-            "https://example.com/images/leetcode1.png",
-            "https://example.com/images/leetcode2.png",
-          ],
-          check_it: "https://example.com/leetcode-masterclass",
-          link: [
-            {
-              linkname: "Dynamic Programming",
-              link: "https://example.com/dynamic-programming",
-            },
-            {
-              linkname: "Graph Theory",
-              link: "https://example.com/graph-theory",
-            },
-          ],
-        },
-      },
-    ],
-  };
-  const Tools = [ToolsGit];
-
-  const AitoolJupyter = {
-    leftIcon: (
-      <FiTool
-        className={`${
-          isDarkMode ? "text-blue-400" : "text-orange-500"
-        } text-3xl`}
-      />
-    ),
-    rightIcon: (
-      <SiJupyter
-        className={`${
-          isDarkMode ? "text-blue-400" : "text-orange-500"
-        } text-3xl`}
-      />
-    ),
-    title: "Jupyter Notebook",
-    experience: "1 years",
-    usedIn: "Data Science and Machine Learning",
-    points: [
-      {
-        point: "Solved 600+ challenges on LeetCode",
-        article: {
-          heading: "Mastering LeetCodeing",
-          subheadings: [
-            {
-              title: "Dynamic Programming",
-              text: "Solved 150+ problems focused on dynamic programming, including knapsack, LIS, and memoization techniques.",
-            },
-            {
-              title: "Graph Theory",
-              text: "Gained deep understanding of BFS, DFS, and shortest path algorithms by solving various graph-related challenges.",
-            },
-          ],
-          images: [
-            "https://example.com/images/leetcode1.png",
-            "https://example.com/images/leetcode2.png",
-          ],
-          check_it: "https://example.com/leetcode-masterclass",
-          link: [
-            {
-              linkname: "Dynamic Programming",
-              link: "https://example.com/dynamic-programming",
-            },
-            {
-              linkname: "Graph Theory",
-              link: "https://example.com/graph-theory",
-            },
-          ],
-        },
-      },
-    ],
-  };
-  const Aitools = [AitoolJupyter];
-
-
-
-
-
-  
   return (
     <>
       {/* Languages heading */}
-      <LanguagesSkill isDarkMode={isDarkMode} />
-
-
-      
-      {/* Web Development heading */}
       <div
         className={`flex items-center gap-2 px-8 pt-8 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
           isDarkMode ? "text-blue-400" : "text-orange-500"
         }`}
       >
-        <FaReact className="h-6 w-6 sm:h-7 sm:w-7 animate-spin-slow" />
-        <span>Frontend Technologies</span>
-      </div>
-      {/* Skill Cards Grid */}
-      <div className="w-full px-8 pb-8">
-        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
-          {frontendSkills.map((lang, index) => (
-            <SkillCard
-              key={index}
-              leftIcon={lang.leftIcon}
-              rightIcon={lang.rightIcon}
-              title={lang.title}
-              experience={lang.experience}
-              usedIn={lang.usedIn}
-              isDarkMode={isDarkMode}
-              points={lang.points}
-              onSeeMore={() => alert("Show detailed skill page here")}
-            />
-          ))}
-        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6 sm:h-7 sm:w-7"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M5 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v18l-7-4-7 4V3z" />
+        </svg>
+        <span>Languages</span>
       </div>
 
-      {/* Database heading */}
-      <div
-        className={`flex items-center gap-2 px-8 pt-8 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
-          isDarkMode ? "text-blue-400" : "text-orange-500"
-        }`}
-      >
-        <FaDatabase className="h-6 w-6 sm:h-7 sm:w-7" />
-        <span>Database Technologies</span>
-      </div>
-      {/* Skill Cards Grid */}
       <div className="w-full px-8 pb-8">
         <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
-          {databaseSkills.map((lang, index) => (
-            <SkillCard
-              key={index}
-              leftIcon={lang.leftIcon}
-              rightIcon={lang.rightIcon}
-              title={lang.title}
-              experience={lang.experience}
-              usedIn={lang.usedIn}
-              isDarkMode={isDarkMode}
-              points={lang.points}
-              onSeeMore={() => alert("Show detailed skill page here")}
-            />
-          ))}
+         {(showAll ? dsaLanguages : dsaLanguages.slice(0, 3)).map((lang, index) => (
+  <div
+    key={index}
+    className="transition-all duration-500 ease-in-out transform opacity-0 animate-fadeIn"
+  >
+    <SkillCard
+      leftIcon={lang.leftIcon}
+      rightIcon={lang.rightIcon}
+      title={lang.title}
+      experience={lang.experience}
+      usedIn={lang.usedIn}
+      isDarkMode={isDarkMode}
+      points={lang.points}
+      onSeeMore={() => alert("Show detailed skill page here")}
+    />
+  </div>
+))}
         </div>
-      </div>
 
-      {/* Tools & Technologies heading */}
-      <div
-        className={`flex items-center gap-2 px-8 pt-8 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
-          isDarkMode ? "text-blue-400" : "text-orange-500"
-        }`}
-      >
-        <FiTool className="h-6 w-6 sm:h-7 sm:w-7" />
-        <span>Tools & Technologies</span>
-      </div>
-      {/* Skill Cards Grid */}
-      <div className="w-full px-8 pb-8">
-        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
-          {Tools.map((lang, index) => (
-            <SkillCard
-              key={index}
-              leftIcon={lang.leftIcon}
-              rightIcon={lang.rightIcon}
-              title={lang.title}
-              experience={lang.experience}
-              usedIn={lang.usedIn}
-              isDarkMode={isDarkMode}
-              points={lang.points}
-              onSeeMore={() => alert("Show detailed skill page here")}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/*AI  Tools & Technologies heading */}
-      <div
-        className={`flex items-center gap-2 px-8 pt-8 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
-          isDarkMode ? "text-blue-400" : "text-orange-500"
-        }`}
-      >
-        <VscCopilot className="h-6 w-6 sm:h-7 sm:w-7" />
-        <span>AI Tools</span>
-      </div>
-      {/* Skill Cards Grid */}
-      <div className="w-full px-8 pb-8">
-        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
-          {Aitools.map((lang, index) => (
-            <SkillCard
-              key={index}
-              leftIcon={lang.leftIcon}
-              rightIcon={lang.rightIcon}
-              title={lang.title}
-              experience={lang.experience}
-              usedIn={lang.usedIn}
-              isDarkMode={isDarkMode}
-              points={lang.points}
-              onSeeMore={() => alert("Show detailed skill page here")}
-            />
-          ))}
-        </div>
-      </div>
-      {/* You can add another loop here for frontendSkills if needed */}
-
-      {/* End Message & Button */}
-      <div className="text-center mt-6 px-4 sm:py-10">
-        <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300">
-          These are All the skills on which I had so far in career their are
-          some more but not mentioned as they are pretty small but crucial
-          skills. 🤗🙏🏼
-        </p>
+        {/* Show More Button */}
+        {dsaLanguages.length > 3 && (
+          <div className="text-center sm:text-end mt-6 sm:mr-16">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className={`px-4 py-2 rounded-full font-semibold transition-all ${
+                isDarkMode
+                  ? "bg-blue-500 text-white hover:bg-blue-600"
+                  : "bg-orange-500 text-white hover:bg-orange-600"
+              }`}
+            >
+              {showAll ? "See Less" : "See More"}
+            </button>
+          </div>
+        )}
       </div>
     </>
   );
