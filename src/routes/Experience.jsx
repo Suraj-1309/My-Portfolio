@@ -11,11 +11,12 @@ export default function Experience({ isDarkMode }) {
     >
       {/* Image at top (switches based on dark mode) */}
       <img
-  src={isDarkMode ? profileImageBlack : profileImageWhite}
-  alt="Person working on a computer"
-  className={`w-40 md:w-60 mb-6 ${!isDarkMode ? "mix-blend-multiply" : ""}`}
-/>
-
+        src={isDarkMode ? profileImageBlack : profileImageWhite}
+        alt="Person working on a computer"
+        className={`w-40 md:w-60 mb-6 ${
+          !isDarkMode ? "mix-blend-multiply" : ""
+        }`}
+      />
 
       {/* Title */}
       <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center opacity-80">
