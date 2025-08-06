@@ -6,6 +6,7 @@ import Education from "./routes/Education.jsx";
 import CliButton from "./components/CliButton.jsx";
 import WebTerminal from "./components/WebTerminal.jsx";
 import ProfileImage from "./components/ProfileImage.jsx";
+import AboutCard from "./components/About.jsx";
 import LeftFooterContent from "./Footer/LeftFooterContent.jsx";
 import FooterEnd from "./Footer/FooterEnd.jsx";
 import RightFooterContent from "./Footer/RightFooterContent.jsx";
@@ -18,6 +19,7 @@ import DsaHeading from "./components/DsaHeading.jsx";
 import DsaRight from "./components/DsaRight.jsx";
 import DsaLeft from "./components/DsaLeft.jsx";
 // Placeholder components for the other pages
+import Dsa from "./routes/Dsa.jsx";
 
 const Home = ({ isDarkMode }) => {
   const [showCli, setShowCli] = useState(false);
@@ -65,16 +67,14 @@ const Home = ({ isDarkMode }) => {
         {/* mt-8 adds margin from the row above */}
         {/* Column 1 Placeholder */}
         <div
-          className={`p-4 rounded-xl shadow-lg ${
-            isDarkMode ? "bg-gray-800" : "bg-gray-100"
-          } h-32 flex items-center justify-center`}
+          className={`p-3 rounded-3xl shadow-lg ${
+            isDarkMode ? "bg-gray-900" : "bg-gray-200"
+          }  flex items-center justify-center`}
         >
-          <p className={`${isDarkMode ? "text-white" : "text-gray-700"}`}>
-            Column 1 Content
-          </p>
+            <AboutCard isDarkMode={isDarkMode} />
         </div>
         {/* Column 2 Placeholder */}
-        <div className={`w-[calc(100%-40px)] m-8 -mt-8`}>
+        <div className={`sm:w-[calc(100%-40px)] pt-8 sm:pt-0 sm:m-8 lg:-mt-8`}>
           <ProfileImage isDarkMode={isDarkMode} />
         </div>
         {/* Column 3 Placeholder */}
@@ -90,23 +90,22 @@ const Home = ({ isDarkMode }) => {
       </div>
 
       {/* Third Row: DSA Record Section */}
-      <div className="mt-8 pb-8">
+      <div className="mt-12 pb-8 ">
         {/* DSA Heading */}
-        <DsaHeading />
 
+        <DsaHeading />
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 ">
           {/* Left Side: 2/3 width */}
           <div className="lg:col-span-2 p-6 sm:rounded-2xl shadow-md sm:m-8">
             {/* TODO: Add DSA Record card content here */}
             <DsaLeft isDarkMode={isDarkMode} />
-
           </div>
 
           {/* Right Side: 1/3 width */}
           <div className="hidden lg:flex lg:col-span-1 p-4  flex justify-end items-center">
             {/* TODO: Add right-side widget or content */}
-            <DsaRight isDarkMode={isDarkMode}/>
+            <DsaRight isDarkMode={isDarkMode} />
           </div>
         </div>
       </div>
@@ -183,15 +182,6 @@ const Projects = ({ isDarkMode }) => (
   </div>
 );
 
-const DSA = ({ isDarkMode }) => (
-  <div
-    className={`min-h-screen p-10 ${isDarkMode ? "text-white" : "text-black"}`}
-  >
-    <h1 className="text-4xl font-bold">DSA Page</h1>
-    <p>Content for the DSA page.</p>
-  </div>
-);
-
 /**
  * AppRoutes component that defines all application routes.
  * It takes the isDarkMode prop and passes it to the page components.
@@ -200,6 +190,7 @@ export default function AppRoutes({ isDarkMode }) {
   return (
     <Routes>
       <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
+      <Route path="/dsa" element={<Dsa isDarkMode={isDarkMode} />} />
       <Route
         path="/education"
         element={<Education isDarkMode={isDarkMode} />}
