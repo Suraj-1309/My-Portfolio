@@ -21,6 +21,8 @@ export default {
         "float-x": "float-x 6s ease-in-out infinite",
         "float-y": "float-y 6s ease-in-out infinite",
         fadeIn: "fadeIn 1s ease-in-out forwards",
+        "vertical-loop": "vertical-loop 8s linear infinite",
+        "vertical-reverse": "vertical-reverse 8s linear infinite",
 
         // 🖋️ Signature animation
         signature: "signature 8s ease-in-out infinite alternate-reverse",
@@ -49,6 +51,14 @@ export default {
             transform: "translateY(0)",
           },
         },
+        "vertical-loop": {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-50%)" },
+        },
+        'vertical-reverse': {
+      '0%': { transform: 'translateY(-50%)' },
+      '100%': { transform: 'translateY(0)' },
+    },
 
         // ✍️ Keyframes for handwriting effect
         signature: {

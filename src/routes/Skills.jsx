@@ -13,6 +13,7 @@ import {
   SiJupyter,
 } from "react-icons/si";
 import { FaDatabase } from "react-icons/fa6";
+import SkillsHeaderCard from "../skills/SkillHeader";
 
 
 import LanguagesSkill from "../skills/LanguagesSkill";
@@ -399,11 +400,13 @@ export default function Skills({ isDarkMode }) {
   
   return (
     <>
+      {/* Skills Header Card */}
+      <SkillsHeaderCard isDarkMode={isDarkMode} />
       {/* Languages heading */}
       <LanguagesSkill isDarkMode={isDarkMode} />
 
 
-      
+
       {/* Web Development heading */}
       <div
         className={`flex items-center gap-2 px-8 pt-8 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
