@@ -23,6 +23,7 @@ export default {
 
         // 🖋️ Signature animation
         signature: "signature 8s ease-in-out infinite alternate-reverse",
+         'spin-slow': 'spin 8s linear infinite',
       },
       keyframes: {
         float: {
@@ -47,6 +48,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwind-scrollbar-hide"),
+  ],
   darkMode: "class",
 };

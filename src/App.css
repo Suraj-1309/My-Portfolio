@@ -1,11 +1,15 @@
 @import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,500,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+}
 
 /* App.css */
 html {

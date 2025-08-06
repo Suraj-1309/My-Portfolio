@@ -10,7 +10,7 @@ export default function NavSection({ isDarkMode, toggleDarkMode }) {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Skills", href: "#skills" },
+    { name: "Skills", href: "/skills" },
     { name: "Projects", href: "#projects" },
     { name: "Education", href: "/education" },
     { name: "Experience", href: "/experience" },

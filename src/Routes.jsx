@@ -19,7 +19,7 @@ import DsaHeading from "./components/DsaHeading.jsx";
 import DsaRight from "./components/DsaRight.jsx";
 import DsaLeft from "./components/DsaLeft.jsx";
 // Placeholder components for the other pages
-import Dsa from "./routes/Dsa.jsx";
+import Skills from "./routes/Skills.jsx"; // Importing the Skills route
 
 const Home = ({ isDarkMode }) => {
   const [showCli, setShowCli] = useState(false);
@@ -164,14 +164,6 @@ const Home = ({ isDarkMode }) => {
   );
 };
 
-const Skills = ({ isDarkMode }) => (
-  <div
-    className={`min-h-screen p-10 ${isDarkMode ? "text-white" : "text-black"}`}
-  >
-    <h1 className="text-4xl font-bold">Skills Page</h1>
-    <p>Content for the skills page.</p>
-  </div>
-);
 
 const Projects = ({ isDarkMode }) => (
   <div
@@ -190,7 +182,7 @@ export default function AppRoutes({ isDarkMode }) {
   return (
     <Routes>
       <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
-      <Route path="/dsa" element={<Dsa isDarkMode={isDarkMode} />} />
+      <Route path="/skills" element={<Skills isDarkMode={isDarkMode} />} />
       <Route
         path="/education"
         element={<Education isDarkMode={isDarkMode} />}
