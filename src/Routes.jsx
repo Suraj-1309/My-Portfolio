@@ -21,6 +21,7 @@ import DsaLeft from "./components/DsaLeft.jsx";
 // Placeholder components for the other pages
 import Skills from "./routes/Skills.jsx"; // Importing the Skills route
 import MyExperiments from "./experiment.jsx/MyExperiments.jsx";
+import SelectedWork from "./selectedwork/SelectedWork.jsx";
 
 const Home = ({ isDarkMode }) => {
   const [showCli, setShowCli] = useState(false);
@@ -83,6 +84,13 @@ const Home = ({ isDarkMode }) => {
           <MyExperiments isDarkMode={isDarkMode} />
         </div>
       </div>
+
+
+      <div>
+        {/* Selected Work Section */}
+        <SelectedWork isDarkMode={isDarkMode} />
+      </div>
+
 
       {/* Third Row: DSA Record Section */}
       <div className="mt-12 pb-8 ">
