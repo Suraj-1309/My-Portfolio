@@ -37,7 +37,7 @@ const ExperimentCard = ({
           initial={{ rotate: -12, y: 0 }}
           whileHover={{ rotate: 0, y: -10 }}
           transition={{ type: "spring", stiffness: 100 }}
-          className="absolute top-4 right-2 w-48 h-32 opacity-80"
+          className="absolute top-4 right-2 w-40 h-36 opacity-80"
         >
           {svg}
         </motion.div>
