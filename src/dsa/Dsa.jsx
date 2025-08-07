@@ -45,7 +45,7 @@ const profiles = [
 
 export default function Dsa({ isDarkMode }) {
   return (
-    <>
+    <div className="max-w-screen-xl mx-auto px-4 overflow-x-hidden">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {profiles.map(({ name, username, link, icon }) => (
           <a
@@ -77,6 +77,6 @@ export default function Dsa({ isDarkMode }) {
       </div>
 
 
-    </>
+    </div>
   );
 }
