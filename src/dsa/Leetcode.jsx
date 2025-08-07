@@ -11,15 +11,15 @@ const Leetcode = ({ isDarkMode }) => {
         <div className="w-full lg:w-1/3 flex flex-col gap-4">
           {/* Div 1 – Profile Card */}
           <a
-            href="https://www.hackerrank.com/suraj_1309" // Replace with your actual profile URL
+            href="https://www.hackerrank.com/suraj_1309"
             target="_blank"
             rel="noopener noreferrer"
             className="no-underline"
           >
-            <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-md p-4 px-0 flex flex-col items-center hover:shadow-lg transition-shadow duration-300">
-              <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+            <div className="rounded-3xl border border-gray-300 dark:border-white p-4 px-0 flex flex-col items-center hover:shadow-lg transition-shadow duration-300 bg-transparent">
+              <div className="flex flex-row items-center gap-6 text-left w-full px-4">
                 <img
-                  src="/your-image-path.png" // Replace with correct image path
+                  src="https://media.geeksforgeeks.org/auth/profile/lgg2vjlbmgp7ixxsf759"
                   alt="Profile"
                   className="w-20 h-20 object-cover rounded-full"
                 />
@@ -39,7 +39,8 @@ const Leetcode = ({ isDarkMode }) => {
                   </p>
                 </div>
               </div>
-              <p className="mt-2 text-gray-600 dark:text-gray-400 max-w-xs">
+
+              <p className="mt-2 text-gray-600 dark:text-gray-400 max-w-xs text-left sm:text-left">
                 Currently I am a Last year Student in Diploma of CSE in
                 Dehradun.
               </p>
@@ -81,7 +82,7 @@ const Leetcode = ({ isDarkMode }) => {
         </div>
 
         {/* Right Column (2/3) – Div 3 */}
-        <div className="w-full lg:w-2/3 border rounded-xl p-4">
+        <div className="w-full lg:w-2/3 border rounded-xl p-2">
           <div className="rounded-2xl shadow-lg p-6 bg-white dark:bg-gray-900 h-full">
             <LeetCodeGraph isDarkMode={isDarkMode} />
           </div>

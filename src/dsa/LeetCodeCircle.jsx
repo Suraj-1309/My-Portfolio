@@ -29,7 +29,7 @@ const LeetCodeCircle = ({
 
   return (
     <div className="flex flex-col items-center gap-1">
-      <div style={{ width: 120, height: 120 }}>
+      <div className="w-[90px] h-[90px] sm:w-[120px] sm:h-[120px]">
         <CircularProgressbar
           value={value}
           text={`${solved}/${total}`}
@@ -44,7 +44,7 @@ const LeetCodeCircle = ({
         />
       </div>
       <p
-        className={`text-sm font-medium ${
+        className={`text-base font-bold ${
           isDarkMode ? "text-gray-300" : "text-gray-600"
         }`}
       >

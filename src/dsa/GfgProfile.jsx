@@ -25,7 +25,7 @@ const GfgProfile = () => {
           href="https://www.geeksforgeeks.org/user/suraj_maybe/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-green-700 border border-green-700 px-3 py-1 rounded hover:bg-green-50"
+          className="text-sm text-green-700 border border-green-700 sm:px-3 sm:py-1 rounded hover:bg-green-50 mt-4 ml-4 sm:m:0 text-center"
         >
           Open Profile
         </a>
