@@ -8,6 +8,7 @@ import {
 // import LeetCodeStatsCard from "./LeetCodeStatsCard";
 import Hackerrank from "./Hackerrank";
 import Leetcode from "./Leetcode";
+import GfgProfile from "./GfgProfile";
 
 const profiles = [
   {
@@ -69,6 +70,13 @@ export default function Dsa({ isDarkMode }) {
         {/* <AnimatedProgress percentage={75} /> */}
         <Leetcode isDarkMode={isDarkMode} />
       </div>
+
+      <div className="pt-6">
+        {/* <AnimatedProgress percentage={75} /> */}
+        <GfgProfile isDarkMode={isDarkMode} />
+      </div>
+
+
     </>
   );
 }
