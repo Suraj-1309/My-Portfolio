@@ -22,6 +22,7 @@ import DsaLeft from "./components/DsaLeft.jsx";
 import Skills from "./routes/Skills.jsx"; // Importing the Skills route
 import MyExperiments from "./experiment.jsx/MyExperiments.jsx";
 import SelectedWork from "./selectedwork/SelectedWork.jsx";
+import Dsa from "./dsa/Dsa.jsx";
 
 const Home = ({ isDarkMode }) => {
   const [showCli, setShowCli] = useState(false);
@@ -195,6 +196,9 @@ export default function AppRoutes({ isDarkMode }) {
         element={<Achievements isDarkMode={isDarkMode} />}
       />
 
+      <Route path="/dsa" 
+      element={<Dsa isDarkMode={isDarkMode}/>}
+      />
       <Route
         path="/experience"
         element={<Experience isDarkMode={isDarkMode} />}
