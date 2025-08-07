@@ -7,6 +7,8 @@ import {
 } from "react-icons/si";
 // import LeetCodeStatsCard from "./LeetCodeStatsCard";
 import Hackerrank from "./Hackerrank";
+import Leetcode from "./Leetcode";
+
 const profiles = [
   {
     name: "LeetCode",
@@ -62,6 +64,10 @@ export default function Dsa({ isDarkMode }) {
       </div>
       <div className="pt-6">
         <Hackerrank isDarkMode={isDarkMode} />
+      </div>
+      <div className="pt-6">
+        {/* <AnimatedProgress percentage={75} /> */}
+        <Leetcode isDarkMode={isDarkMode} />
       </div>
     </>
   );
