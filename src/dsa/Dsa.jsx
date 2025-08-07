@@ -10,6 +10,7 @@ import Hackerrank from "./Hackerrank";
 import Leetcode from "./Leetcode";
 import GfgProfile from "./GfgProfile";
 import Codeforces from "./Codeforces";
+import Codechef from "./Codechef";
 
 const profiles = [
   {
@@ -81,6 +82,11 @@ export default function Dsa({ isDarkMode }) {
       <div className="pt-6">
         {/* <AnimatedProgress percentage={75} /> */}
         <Codeforces isDarkMode={isDarkMode} />
+      </div>
+
+      <div className="pt-6">
+        {/* <AnimatedProgress percentage={75} /> */}
+        <Codechef isDarkMode={isDarkMode} />
       </div>
 
 

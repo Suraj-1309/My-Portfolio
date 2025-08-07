@@ -8,10 +8,13 @@ import {
 } from "recharts";
 
 const data = [
-  { year: "July 2025", rating: 369 },
+  { year: "04 2024", rating: 967 },
+  { year: "04 2024", rating: 1158 },
+  { year: "01 2025", rating: 943 },
+  { year: "06 2025", rating: 1021 },
 ];
 
-const CodeforcesGraph = ({ isDarkMode }) => {
+const CodechefGraph = ({ isDarkMode }) => {
   const axisColor = isDarkMode ? "#D1D5DB" : "#374151"; // light gray in dark mode, dark gray in light mode
   const bgColor = isDarkMode ? "#111827" : "#ffffff"; // background
   const textColor = isDarkMode ? "#ffffff" : "#000000";
@@ -22,7 +25,7 @@ const CodeforcesGraph = ({ isDarkMode }) => {
         <LineChart data={data}>
           <XAxis dataKey="year" tick={{ fill: axisColor, fontSize: 14 }} />
           <YAxis
-            domain={[1200, "dataMax"]}
+            domain={[900, "dataMax"]}
             tick={{ fill: axisColor, fontSize: 14 }}
           />
           <Tooltip
@@ -37,7 +40,7 @@ const CodeforcesGraph = ({ isDarkMode }) => {
           <Line
             type="linear" // sharp lines
             dataKey="rating"
-            stroke="#16a2f9ff"
+            stroke="#56f916ff"
             strokeWidth={3}
             dot={{ r: 4 }}
             activeDot={{ r: 6 }}
@@ -54,4 +57,4 @@ const CodeforcesGraph = ({ isDarkMode }) => {
   );
 };
 
-export default CodeforcesGraph;
+export default CodechefGraph;

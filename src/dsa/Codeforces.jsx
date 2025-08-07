@@ -49,7 +49,7 @@ const Codeforces = ({ isDarkMode }) => {
       {/* Right Column (2/3) */}
       <div className="w-full lg:w-2/3">
         <div
-          className={`bg-transparent border ${borderColor} p-4 h-fit rounded-xl flex flex-col`}
+          className={`bg-transparent border ${borderColor} p-4 h-full rounded-xl flex flex-col`}
         >
           <div className="flex-grow">
             <CodeforcesGraph isDarkMode={isDarkMode} />
