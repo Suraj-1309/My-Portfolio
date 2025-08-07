@@ -20,6 +20,7 @@ import DsaRight from "./components/DsaRight.jsx";
 import DsaLeft from "./components/DsaLeft.jsx";
 // Placeholder components for the other pages
 import Skills from "./routes/Skills.jsx"; // Importing the Skills route
+import MyExperiments from "./experiment.jsx/MyExperiments.jsx";
 
 const Home = ({ isDarkMode }) => {
   const [showCli, setShowCli] = useState(false);
@@ -71,21 +72,15 @@ const Home = ({ isDarkMode }) => {
             isDarkMode ? "bg-gray-900" : "bg-gray-200"
           }  flex items-center justify-center`}
         >
-            <AboutCard isDarkMode={isDarkMode} />
+          <AboutCard isDarkMode={isDarkMode} />
         </div>
         {/* Column 2 Placeholder */}
         <div className={`sm:w-[calc(100%-40px)] pt-8 sm:pt-0 sm:m-8 lg:-mt-8`}>
           <ProfileImage isDarkMode={isDarkMode} />
         </div>
         {/* Column 3 Placeholder */}
-        <div
-          className={`p-4 rounded-xl shadow-lg ${
-            isDarkMode ? "bg-gray-800" : "bg-gray-100"
-          } h-32 flex items-center justify-center`}
-        >
-          <p className={`${isDarkMode ? "text-white" : "text-gray-700"}`}>
-            Column 3 Content
-          </p>
+        <div className={`w-full sm:-mt-12`}>
+          <MyExperiments isDarkMode={isDarkMode} />
         </div>
       </div>
 
@@ -163,7 +158,6 @@ const Home = ({ isDarkMode }) => {
     </div>
   );
 };
-
 
 const Projects = ({ isDarkMode }) => (
   <div

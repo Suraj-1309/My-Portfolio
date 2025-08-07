@@ -17,6 +17,7 @@
     "@react-spring/web": "^10.0.1",
     "axios": "^1.11.0",
     "d3-geo": "^3.1.1",
+    "framer-motion": "^12.23.12",
     "lucide-react": "^0.536.0",
     "react": "^19.1.0",
     "react-animated-text-content": "^1.0.1",
