@@ -23,7 +23,6 @@ export default {
         fadeIn: "fadeIn 1s ease-in-out forwards",
         "vertical-loop": "vertical-loop 8s linear infinite",
         "vertical-reverse": "vertical-reverse 8s linear infinite",
-
         // 🖋️ Signature animation
         signature: "signature 8s ease-in-out infinite alternate-reverse",
         "spin-slow": "spin 8s linear infinite",
@@ -55,10 +54,10 @@ export default {
           "0%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(-50%)" },
         },
-        'vertical-reverse': {
-      '0%': { transform: 'translateY(-50%)' },
-      '100%': { transform: 'translateY(0)' },
-    },
+        "vertical-reverse": {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
 
         // ✍️ Keyframes for handwriting effect
         signature: {

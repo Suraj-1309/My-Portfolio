@@ -11,65 +11,21 @@ import Leetcode from "./Leetcode";
 import GfgProfile from "./GfgProfile";
 import Codeforces from "./Codeforces";
 import Codechef from "./Codechef";
+import DsaHeading from "./DsaHeading";
 
-const profiles = [
-  {
-    name: "LeetCode",
-    username: "your_username",
-    link: "https://leetcode.com/your_username/",
-    icon: <SiLeetcode />,
-  },
-  {
-    name: "Codeforces",
-    username: "your_username",
-    link: "https://codeforces.com/profile/your_username",
-    icon: <SiCodeforces />,
-  },
-  {
-    name: "CodeChef",
-    username: "your_username",
-    link: "https://www.codechef.com/users/your_username",
-    icon: <SiCodechef />,
-  },
-  {
-    name: "GeeksforGeeks",
-    username: "your_username",
-    link: "https://auth.geeksforgeeks.org/user/your_username/profile",
-    icon: <SiGeeksforgeeks />,
-  },
-  {
-    name: "HackerRank",
-    username: "your_username",
-    link: "https://www.hackerrank.com/your_username",
-    icon: <SiHackerrank />,
-  },
-];
 
 export default function Dsa({ isDarkMode }) {
   return (
     <div className="max-w-screen-xl mx-auto px-4 overflow-x-hidden">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {profiles.map(({ name, username, link, icon }) => (
-          <a
-            key={name}
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-4 rounded-lg border shadow hover:scale-[1.03] transition-all flex items-center space-x-4"
-          >
-            <div className="text-3xl">{icon}</div>
-            <div>
-              <h3 className="text-xl font-bold">{name}</h3>
-              <p className="text-sm text-gray-600">@{username}</p>
-            </div>
-          </a>
-        ))}
+      
+      <div>
+          <DsaHeading/>
       </div>
 
 
-      <div className="pt-6">
+      <div className="pt-6" id="hackerrank">
         <div
-          className={`flex items-center gap-2 pt-2 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
+          className={`flex items-center gap-2 pt-2 pb-4 font-bold text-xl sm:text-2xl tracking-wide w-full ${
             isDarkMode ? "text-blue-400" : "text-orange-500"
           }`}
         >
@@ -81,7 +37,7 @@ export default function Dsa({ isDarkMode }) {
 
 
       {/* Leetcode component  */}
-      <div className="pt-6">
+      <div className="pt-6" id="leetcode">
         <div
           className={`flex items-center gap-2 pt-2 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
             isDarkMode ? "text-blue-400" : "text-orange-500"
@@ -96,7 +52,7 @@ export default function Dsa({ isDarkMode }) {
 
 
       {/* geeksforgeeks component  */}
-      <div className="pt-6">
+      <div className="pt-6" id="gfg">
         <div
           className={`flex items-center gap-2 pt-2 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
             isDarkMode ? "text-blue-400" : "text-orange-500"
@@ -111,7 +67,7 @@ export default function Dsa({ isDarkMode }) {
 
 
         {/* codeforces component  */}
-      <div className="pt-6">
+      <div className="pt-6" id = "codeforces">
         <div
           className={`flex items-center gap-2 pt-2 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
             isDarkMode ? "text-blue-400" : "text-orange-500"
@@ -125,7 +81,7 @@ export default function Dsa({ isDarkMode }) {
       </div>
 
       {/* codechef component */}
-      <div className="pt-6">
+      <div className="pt-6" id="codechef">
         <div
           className={`flex items-center gap-2 pt-2 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
             isDarkMode ? "text-blue-400" : "text-orange-500"

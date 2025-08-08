@@ -15,7 +15,7 @@ export default function Hackerrank({ isDarkMode }) {
               isDarkMode ? "text-white" : "text-black"
             }`}
           >
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 w-full">
               {/* Avatar */}
               <img
                 src="https://media.geeksforgeeks.org/auth/profile/lgg2vjlbmgp7ixxsf759"
