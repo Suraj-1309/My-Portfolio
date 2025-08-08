@@ -2,10 +2,9 @@ import React, { useRef } from "react";
 import ProjectsCard from "./ProjectsCard";
 import ProjectsData from "./ProjectsData";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { AiFillAndroid } from 'react-icons/ai';
-import { GoCopilot } from 'react-icons/go';
-import { TbWorldWww } from 'react-icons/tb';
-
+import { AiFillAndroid } from "react-icons/ai";
+import { GoCopilot } from "react-icons/go";
+import { TbWorldWww } from "react-icons/tb";
 
 const Projects = ({ isDarkMode }) => {
   const scrollRef = useRef(null);
@@ -29,6 +28,13 @@ const Projects = ({ isDarkMode }) => {
   return (
     <div>
       {/* for Webdev projects  */}
+        {/* Left Section */}
+      <div className="px-4 md:px-8 py-2 pb-4 ">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide mb-2">
+          My Projects
+        </h1>
+      </div>
+
       <div className="px-4 md:px-8 py-2 relative">
         <div className="flex justify-between items-center mb-6">
           <div
@@ -110,7 +116,7 @@ const Projects = ({ isDarkMode }) => {
             ))}
           </div> */}
 
-          {/* <h1
+      {/* <h1
             className={`px-4 py-4 sm:py-10 font-extrabold text-xl sm:text-3xl md:text-4xl text-center text-gray-200 dark:text-gray-500`}
           >
             Currently No Project to show in this field
@@ -157,13 +163,24 @@ const Projects = ({ isDarkMode }) => {
               </div>
             ))}
           </div> */}
-          {/* <h1
+      {/* <h1
             className={`px-4 py-4 sm:py-10 font-extrabold text-xl sm:text-3xl md:text-4xl text-center text-gray-200 dark:text-gray-500`}
           >
             Currently No Project to show in this field
           </h1>
         </div>
       </div> */}
+
+      {/* End Message & Button */}
+      <div className="text-center mt-6 px-4 sm:py-10">
+        <p className="text-base sm:text-base text-gray-700 dark:text-gray-300">
+            Above I mention all the projects which I think are suitable to mention in my portfolio I am still working on my new project.{"\n"} if you have any idea or work do contact me. 
+
+        </p>
+        <p className="text-base sm:text-base text-gray-700 dark:text-gray-300">
+           I would like to contribute in your porject if you like. 🤗
+        </p>
+      </div>
     </div>
   );
 };
