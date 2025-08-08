@@ -102,7 +102,7 @@ const Home = ({ isDarkMode }) => {
         {/* Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3 ">
           {/* Left Side: 2/3 width */}
-          <div className="lg:col-span-2 p-6 sm:rounded-2xl shadow-md sm:m-8">
+          <div className="lg:col-span-2 pt-2 sm:p-4 sm:rounded-2xl shadow-md sm:m-8">
             {/* TODO: Add DSA Record card content here */}
             <DsaLeft isDarkMode={isDarkMode} />
           </div>
@@ -179,8 +179,10 @@ export default function AppRoutes({ isDarkMode }) {
       <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
       <Route path="/skills" element={<Skills isDarkMode={isDarkMode} />} />
       <Route path="/projects" element={<Projects isDarkMode={isDarkMode} />} />
-      <Route path="/projects/:id" element={<DynamicProject  isDarkMode={isDarkMode} />} />
-      
+      <Route
+        path="/projects/:id"
+        element={<DynamicProject isDarkMode={isDarkMode} />}
+      />
 
       <Route
         path="/education"
