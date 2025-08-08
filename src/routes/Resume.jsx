@@ -3,7 +3,7 @@ import ResumeCard from "../resume_page/ResumeCard";
 
 export default function Resume({ isDarkMode }) {
   return (
-    <div className={`w-full min-h-screen ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
+    <div className={`w-full min-h-screen`}>
       <ResumeCard isDarkMode={isDarkMode} />
     </div>
   );
