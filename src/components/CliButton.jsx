@@ -74,7 +74,7 @@ export default function CliButton({ toggleCli, isDarkMode }) {
       </div>
 
       {/* Terminal command line prompt and text */}
-      <div className={`p-4 rounded-b-xl h-full flex flex-col justify-center
+      <div className={`p-4 rounded-b-xl h-full flex flex-col justify-center border border-black 
                      ${isDarkMode ? "bg-gray-900" : "bg-gray-50"}`}>
         <div className="flex flex-wrap items-center">
           <span className={`font-mono text-sm sm:text-base mr-2 ${isDarkMode ? "text-green-400" : "text-gray-600"}`}>
