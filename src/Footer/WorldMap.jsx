@@ -41,9 +41,9 @@ const WorldMap = () => {
         className={`${isDragging ? "cursor-grabbing" : "cursor-grab"} w-full h-[180px] sm:h-[400px] md:h-[420px] md:-mt-8`}
       >
         <ComposableMap
-          projectionConfig={{ scale: 140 }}
-          width={800}
-          height={400}
+          projectionConfig={{ scale: 200 }}
+          width={1000}
+          height={470}
           style={{ width: "100%", height: "100%" }}
         >
           <ZoomableGroup center={[20, 20]} zoom={1}>
