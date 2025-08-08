@@ -68,6 +68,14 @@ export default function Dsa({ isDarkMode }) {
 
 
       <div className="pt-6">
+        <div
+          className={`flex items-center gap-2 pt-2 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
+            isDarkMode ? "text-blue-400" : "text-orange-500"
+          }`}
+        >
+          <SiHackerrank className="h-7 w-7 sm:h-10 sm:w-10" />
+          <span>HackerRank</span>
+        </div>
         <Hackerrank isDarkMode={isDarkMode} />
       </div>
 
@@ -80,7 +88,7 @@ export default function Dsa({ isDarkMode }) {
           }`}
         >
           <SiLeetcode className="h-7 w-7 sm:h-10 sm:w-10" />
-          <span>Codeforces</span>
+          <span>LeetCode</span>
         </div>
         {/* <AnimatedProgress percentage={75} /> */}
         <Leetcode isDarkMode={isDarkMode} />
@@ -95,7 +103,7 @@ export default function Dsa({ isDarkMode }) {
           }`}
         >
           <SiGeeksforgeeks className="h-7 w-7 sm:h-10 sm:w-10" />
-          <span>Codeforces</span>
+          <span>GeeksForGeeks</span>
         </div>
         {/* <AnimatedProgress percentage={75} /> */}
         <GfgProfile isDarkMode={isDarkMode} />
@@ -124,7 +132,7 @@ export default function Dsa({ isDarkMode }) {
           }`}
         >
           <SiCodechef className="h-7 w-7 sm:h-10 sm:w-10" />
-          <span>Codeforces</span>
+          <span>CodeChef</span>
         </div>
 
         {/* <AnimatedProgress percentage={75} /> */}
