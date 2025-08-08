@@ -50,7 +50,7 @@ const Codechef = ({ isDarkMode }) => {
           <hr className="border-t border-gray-300 dark:border-gray-700 mt-3" />
           {/* Visit Profile Button */}
           <a
-            href="https://codeforces.com/profile/suraj_1309"
+            href="https://www.codechef.com/users/im_nika"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 w-full inline-block text-center border px-4 py-2 flex justify-center align-end rounded-lg font-semibold transition hover:scale-105 hover:underline"

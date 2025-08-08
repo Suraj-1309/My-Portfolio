@@ -11,7 +11,7 @@ const Leetcode = ({ isDarkMode }) => {
         <div className="w-full lg:w-1/3 flex flex-col gap-4">
           {/* Div 1 – Profile Card */}
           <a
-            href="https://www.hackerrank.com/suraj_1309"
+            href="https://leetcode.com/u/suraj_1309/"
             target="_blank"
             rel="noopener noreferrer"
             className="no-underline"
@@ -56,25 +56,25 @@ const Leetcode = ({ isDarkMode }) => {
               <LeetCodeCircle
                 solved={99}
                 total={888}
-                color="#14b8a6"
+                color="#0bab98ff"
                 label="Easy"
-                trailColor="#adcbc8ff"
+                trailColor="#d5f4f0ff"
                 isDarkMode={isDarkMode}
               />
               <LeetCodeCircle
                 solved={76}
                 total={1894}
-                color="#facc15"
+                color="#ffc800ff"
                 label="Medium"
-                trailColor="#ece4c8ff"
+                trailColor="#fceebbff"
                 isDarkMode={isDarkMode}
               />
               <LeetCodeCircle
                 solved={27}
                 total={859}
-                color="#ef4444"
+                color="#ee1919ff"
                 label="Hard"
-                trailColor="#e7bdbdff"
+                trailColor="#ffe1e1ff"
                 isDarkMode={isDarkMode}
               />
             </div>
