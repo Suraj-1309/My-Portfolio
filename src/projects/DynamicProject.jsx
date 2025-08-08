@@ -59,18 +59,16 @@ const DynamicProject = () => {
     <div className="max-w-6xl mx-auto px-4 py-10 space-y-10">
       {/* Back Button */}
       {/* Sticky Navbar with Back Button Only */}
-<div className="sticky top-10 z-50 mx-auto flex w-full max-w-[calc(1090px)] items-center justify-start">
-  <button
-    onClick={() => navigate(-1)}
-    className="group/button relative space-x-2 inline-flex whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-base border border-gray-300 rounded-3xl origin-center transform active:translate-y-0.5 transition-all duration-100 ease-out hover:before:scale-x-100 hover:before:opacity-100 before:content-[''] before:absolute before:inset-0 before:rounded-3xl before:shadow-[rgba(255,255,255,0.8)_0px_6px_4px_0px_inset,rgba(255,243,230,0.2)_0px_-4px_2px_0px_inset,rgba(255,123,0,0.25)_0px_-8px_10px_0px_inset,rgba(255,200,163,0.4)_0px_-12px_20px_0px_inset,rgba(255,106,0,0.2)_0px_12px_24px_-2px,rgba(245,106,0,0.3)_0px_3px_8px_-2px] before:transition before:duration-300 before:ease-out before:origin-center before:opacity-0 px-5 py-3.5 pr-6 before:scale-x-[5%] bg-white dark:bg-gray-800 text-[#767676] hover:text-[#2f2f2f]"
-  >
-    <div className="text-lg font-medium leading-none transition-all group-hover/button:-translate-y-0.5">
-      ← Back
-    </div>
-  </button>
-</div>
-
-
+      <div className="sticky top-10 z-50 mx-auto flex w-full max-w-[calc(1090px)] items-center justify-start">
+        <button
+          onClick={() => navigate(-1)}
+          className="group/button relative space-x-2 inline-flex whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-base border border-gray-300 rounded-3xl origin-center transform active:translate-y-0.5 transition-all duration-100 ease-out hover:before:scale-x-100 hover:before:opacity-100 before:content-[''] before:absolute before:inset-0 before:rounded-3xl before:shadow-[rgba(255,255,255,0.8)_0px_6px_4px_0px_inset,rgba(255,243,230,0.2)_0px_-4px_2px_0px_inset,rgba(255,123,0,0.25)_0px_-8px_10px_0px_inset,rgba(255,200,163,0.4)_0px_-12px_20px_0px_inset,rgba(255,106,0,0.2)_0px_12px_24px_-2px,rgba(245,106,0,0.3)_0px_3px_8px_-2px] before:transition before:duration-300 before:ease-out before:origin-center before:opacity-0 px-5 py-3.5 pr-6 before:scale-x-[5%] bg-white dark:bg-gray-800 text-[#767676] hover:text-[#2f2f2f]"
+        >
+          <div className="text-lg font-medium leading-none transition-all group-hover/button:-translate-y-0.5">
+            ← Back
+          </div>
+        </button>
+      </div>
 
       {/* Main Image */}
       <img
