@@ -141,8 +141,11 @@ const AnimatedText = ({ text, isDarkMode }) => {
       {/* Greeting message container */}
       <div
         className={`absolute font-semibold shadow-lg transition-opacity duration-500
-              rounded-[50px] px-5 py-3 text-white sm:text-lg
-              ${isDarkMode ? "bg-blue-400" : "bg-orange-500"}`}
+        rounded-[50px] 
+        px-3 py-2 text-xl   /* mobile default size */
+        sm:px-5 sm:py-3 sm:text-lg /* larger size on sm and up */
+        text-white
+        ${isDarkMode ? "bg-blue-400" : "bg-orange-500"}`}
         style={{
           top: greetingPosition.top + 20,
           left: greetingPosition.left + 100,

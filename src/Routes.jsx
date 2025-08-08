@@ -47,12 +47,13 @@ const Home = ({ isDarkMode }) => {
         {/* First Column for the Name */}
         {/* order-2 for mobile to place it below CLI, order-1 for desktop to place it on left */}
         <div className="order-2 md:order-1">
-          <div className="pt-4 sm:pt-8 sm:pl-0 pl-4">
+          <div className="pt-4 sm:pt-8 sm:pl-0 pl-2">
             {" "}
             {/* Keep name slightly above */}
             <AnimatedText text="suraj." isDarkMode={isDarkMode} />
           </div>
         </div>
+        
         {/* Second Column for Activate CLI Button */}
         {/* order-1 for mobile to place it above name, order-2 for desktop to place it on right */}
         <div className="order-2 md:order-2 pb-8">
