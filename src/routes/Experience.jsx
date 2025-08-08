@@ -5,7 +5,7 @@ import profileImageBlack from "../pics/experience_black.png";
 export default function Experience({ isDarkMode }) {
   return (
     <div
-      className={`flex flex-col justify-center items-center min-h-[calc(100vh-120px)] px-4 ${
+      className={`flex flex-col justify-center items-center min-h-[calc(100vh-150px)] px-4 ${
         isDarkMode ? "bg-black text-gray-400" : "bg-white text-gray-600"
       } transition-colors duration-300`}
     >
