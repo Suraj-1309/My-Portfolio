@@ -6,19 +6,14 @@ export default function FakeSelected({ content, isDarkMode, onClose }) {
     ? "bg-[#111111] text-gray-300"
     : "bg-white text-gray-800";
 
-  const {
-    heading,
-    images = [],
-    subheadings = [],
-    link
-  } = content || {};
+  const { heading, images = [], subheadings = [], link } = content || {};
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex flex-col items-center overflow-y-auto ${containerStyle} transition-all duration-500 ease-in-out`}
+      className={`fixed inset-0 z-50 flex flex-col items-center overflow-y-auto ${containerStyle} transition-all duration-500 ease-in-out w-full`}
     >
       {/* Navbar (UNCHANGED) */}
-      <div className="sticky top-10 z-50 mx-auto flex w-full max-w-[calc(1090px)] items-center justify-between rounded-full border border-gray-300  p-2 transition-all ease-in-out duration-700 animate-in fade-in-0 slide-in-from-top-[100%]">
+      <div className="sticky bg-white dark:bg-black top-10 z-50 mx-auto flex w-full max-w-[calc(1090px)] items-center justify-between rounded-full border border-gray-300  p-2 transition-all ease-in-out duration-700 animate-in fade-in-0 slide-in-from-top-[100%] ">
         <button
           onClick={onClose}
           type="button"
@@ -41,7 +36,7 @@ export default function FakeSelected({ content, isDarkMode, onClose }) {
       </div>
 
       {/* Article Content */}
-      <div className="max-w-3xl w-full px-6 py-20">
+      <div className="max-w-4xl w-full px-6 py-20">
         {/* Heading */}
         {heading && <h1 className="text-3xl font-bold mb-6">{heading}</h1>}
 
