@@ -45,24 +45,23 @@ export default function NavSection({ isDarkMode, toggleDarkMode }) {
         {isDesktop ? (
           <div className="flex items-center space-x-8">
             <ul className="flex items-center space-x-8">
-  {navLinks.map((link) => (
-    <li key={link.name}>
-      <HashLink
-        smooth
-        to={link.href}
-        className={`relative font-semibold cursor-pointer transition-colors duration-300 ${
-          isActive(link.href)
-            ? "text-orange-500"
-            : "text-gray-500 hover:text-orange-500 dark:text-gray-200 dark:hover:text-orange-500"
-        }`}
-        onClick={() => setIsMenuOpen(false)}
-      >
-        {link.name}
-      </HashLink>
-    </li>
-  ))}
-</ul>
-
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <HashLink
+                    smooth
+                    to={link.href}
+                    className={`relative font-semibold cursor-pointer transition-colors duration-300 ${
+                      isActive(link.href)
+                        ? "text-orange-500"
+                        : "text-gray-500 hover:text-orange-500 dark:text-gray-200 dark:hover:text-orange-500"
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.name}
+                  </HashLink>
+                </li>
+              ))}
+            </ul>
 
             <ToggleBgButton isDark={isDarkMode} toggleTheme={toggleDarkMode} />
           </div>
@@ -137,24 +136,23 @@ export default function NavSection({ isDarkMode, toggleDarkMode }) {
               </button>
 
               <ul className="flex flex-col mt-16 space-y-4">
-  {navLinks.map((link) => (
-    <li key={link.name}>
-      <HashLink
-        smooth
-        to={link.href}
-        className={`text-xl font-semibold cursor-pointer transition-colors duration-300 ${
-          isActive(link.href)
-            ? "text-orange-500"
-            : "text-gray-700 hover:text-orange-500 dark:text-gray-200 dark:hover:text-orange-500"
-        }`}
-        onClick={() => setIsMenuOpen(false)}
-      >
-        {link.name}
-      </HashLink>
-    </li>
-  ))}
-</ul>
-
+                {navLinks.map((link) => (
+                  <li key={link.name}>
+                    <HashLink
+                      smooth
+                      to={link.href}
+                      className={`text-xl font-semibold cursor-pointer transition-colors duration-300 ${
+                        isActive(link.href)
+                          ? "text-orange-500"
+                          : "text-gray-700 hover:text-orange-500 dark:text-gray-200 dark:hover:text-orange-500"
+                      }`}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.name}
+                    </HashLink>
+                  </li>
+                ))}
+              </ul>
             </div>
           </>
         )}
