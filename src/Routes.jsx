@@ -23,6 +23,9 @@ import Skills from "./routes/Skills.jsx"; // Importing the Skills route
 import MyExperiments from "./experiment.jsx/MyExperiments.jsx";
 import SelectedWork from "./selectedwork/SelectedWork.jsx";
 import Dsa from "./dsa/Dsa.jsx";
+import Projects from "./projects/Projects.jsx";
+import DynamicProject from "./projects/DynamicProject.jsx";
+// import DynamicProject from "./projects/DynamicProject.jsx";
 
 const Home = ({ isDarkMode }) => {
   const [showCli, setShowCli] = useState(false);
@@ -86,12 +89,10 @@ const Home = ({ isDarkMode }) => {
         </div>
       </div>
 
-
       <div>
         {/* Selected Work Section */}
         <SelectedWork isDarkMode={isDarkMode} />
       </div>
-
 
       {/* Third Row: DSA Record Section */}
       <div className="mt-12 pb-8 ">
@@ -168,15 +169,6 @@ const Home = ({ isDarkMode }) => {
   );
 };
 
-const Projects = ({ isDarkMode }) => (
-  <div
-    className={`min-h-screen p-10 ${isDarkMode ? "text-white" : "text-black"}`}
-  >
-    <h1 className="text-4xl font-bold">Projects Page</h1>
-    <p>Content for the projects page.</p>
-  </div>
-);
-
 /**
  * AppRoutes component that defines all application routes.
  * It takes the isDarkMode prop and passes it to the page components.
@@ -186,6 +178,10 @@ export default function AppRoutes({ isDarkMode }) {
     <Routes>
       <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
       <Route path="/skills" element={<Skills isDarkMode={isDarkMode} />} />
+      <Route path="/projects" element={<Projects isDarkMode={isDarkMode} />} />
+      <Route path="/projects/:id" element={<DynamicProject  isDarkMode={isDarkMode} />} />
+      
+
       <Route
         path="/education"
         element={<Education isDarkMode={isDarkMode} />}
@@ -196,9 +192,7 @@ export default function AppRoutes({ isDarkMode }) {
         element={<Achievements isDarkMode={isDarkMode} />}
       />
 
-      <Route path="/dsa" 
-      element={<Dsa isDarkMode={isDarkMode}/>}
-      />
+      <Route path="/dsa" element={<Dsa isDarkMode={isDarkMode} />} />
       <Route
         path="/experience"
         element={<Experience isDarkMode={isDarkMode} />}
