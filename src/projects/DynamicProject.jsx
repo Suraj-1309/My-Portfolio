@@ -28,117 +28,143 @@ const DynamicProject = () => {
     projectViewLink,
   } = data;
 
-  return (
-    <div className="max-w-5xl mx-auto px-4 py-10">
-      <button
-        onClick={() => navigate(-1)}
-        className="mb-6 px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition"
-      >
-        ← Back
-      </button>
-
-      {/* Header */}
-      <div className="flex items-center gap-4 mb-6">
-        <div className="w-12 h-12">{svg}</div>
-        <div>
-          <h1 className="text-2xl font-bold">{heading}</h1>
-          <p className="text-gray-600 dark:text-gray-300">{headingText}</p>
-        </div>
+  const FancyButton = ({ text, link }) => (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group/button space-x-2 inline-flex whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 relative text-base border border-gray-300 rounded-3xl origin-center transform active:translate-y-0.5 transition-all duration-100 ease-out hover:before:scale-x-100 hover:before:opacity-100 before:content-[''] before:absolute before:inset-0 before:rounded-3xl before:shadow-[rgba(255,255,255,0.8)_0px_6px_4px_0px_inset,rgba(255,243,230,0.2)_0px_-4px_2px_0px_inset,rgba(255,123,0,0.25)_0px_-8px_10px_0px_inset,rgba(255,200,163,0.4)_0px_-12px_20px_0px_inset,rgba(255,106,0,0.2)_0px_12px_24px_-2px,rgba(245,106,0,0.3)_0px_3px_8px_-2px] before:transition before:duration-300 before:ease-out before:origin-center before:opacity-0 w-full items-center justify-between px-6 py-3.5 pr-8 before:scale-x-[5%]"
+    >
+      <div className="text-lg font-medium leading-none text-[#767676] transition-all group-hover/button:-translate-y-0.5 group-hover/button:text-[#2f2f2f]">
+        {text}
       </div>
+      <div className="absolute right-[22.2px] top-[22px] z-10 h-[2px] w-4 rounded-full bg-white group-hover/button:bg-[#ffc8a315]"></div>
+      <svg
+        viewBox="0 0 8 8"
+        fill="currentColor"
+        className="h-2.5 w-2.5 rotate-45 text-[#767676] transition-transform duration-300 ease-in-out group-hover/button:translate-x-2.5 group-hover/button:text-[#2f2f2f]"
+      >
+        <path
+          d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </a>
+  );
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-10 space-y-10">
+      {/* Back Button */}
+      {/* Sticky Navbar with Back Button Only */}
+<div className="sticky top-10 z-50 mx-auto flex w-full max-w-[calc(1090px)] items-center justify-start">
+  <button
+    onClick={() => navigate(-1)}
+    className="group/button relative space-x-2 inline-flex whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-base border border-gray-300 rounded-3xl origin-center transform active:translate-y-0.5 transition-all duration-100 ease-out hover:before:scale-x-100 hover:before:opacity-100 before:content-[''] before:absolute before:inset-0 before:rounded-3xl before:shadow-[rgba(255,255,255,0.8)_0px_6px_4px_0px_inset,rgba(255,243,230,0.2)_0px_-4px_2px_0px_inset,rgba(255,123,0,0.25)_0px_-8px_10px_0px_inset,rgba(255,200,163,0.4)_0px_-12px_20px_0px_inset,rgba(255,106,0,0.2)_0px_12px_24px_-2px,rgba(245,106,0,0.3)_0px_3px_8px_-2px] before:transition before:duration-300 before:ease-out before:origin-center before:opacity-0 px-5 py-3.5 pr-6 before:scale-x-[5%] bg-white dark:bg-gray-800 text-[#767676] hover:text-[#2f2f2f]"
+  >
+    <div className="text-lg font-medium leading-none transition-all group-hover/button:-translate-y-0.5">
+      ← Back
+    </div>
+  </button>
+</div>
+
+
 
       {/* Main Image */}
       <img
         src={mainPhoto}
         alt="main"
-        className="w-full rounded-xl object-cover mb-8"
+        className="w-full rounded-2xl object-cover max-h-[400px] shadow-md"
       />
 
-      {/* Tech Used */}
-      <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-2">Technologies Used</h2>
-        <div className="flex flex-wrap gap-2">
-          {technologyUsed.map((tech, i) => (
-            <span
-              key={i}
-              className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm text-gray-800 dark:text-white"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
+      {/* Heading + Subheading */}
+      <div className="px-4 sm:px-6 space-y-3">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold">
+          {heading}
+        </h1>
+        <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 pt-2 max-w-md sm:max-w-2xl mx-auto">
+          {headingText}
+        </p>
       </div>
 
-      {/* Key Features */}
-      {keyFeatures.length > 0 && (
-        <div className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">Key Features</h2>
-          <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
+      {/* Action Buttons */}
+      <div className=" w-fit flex justify-center gap-3 mt-4 flex-nowrap overflow-x-auto">
+        <FancyButton
+          text="View Source Code"
+          link={sourceCodeLink}
+          className="w-auto whitespace-nowrap px-3 py-1 text-xs"
+        />
+        <FancyButton
+          text="Visit Live Project"
+          link={projectViewLink}
+          className="w-auto whitespace-nowrap px-3 py-1 text-xs"
+        />
+      </div>
+
+      {/* Tech + Features */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <h2 className="text-xl sm:text-2xl font-semibold mb-3">
+            Technologies Used
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {technologyUsed.map((tech, i) => (
+              <span
+                key={i}
+                className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-normal  text-gray-800 dark:text-white"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h2 className="text-xl sm:text-2xl font-semibold mb-3">
+            Key Features
+          </h2>
+          <ul className="list-disc pl-5 text-sm sm:text-base text-gray-700 dark:text-gray-300 space-y-2">
             {keyFeatures.map((feature, i) => (
               <li key={i}>{feature}</li>
             ))}
           </ul>
         </div>
-      )}
+      </div>
 
-      {/* Challenges */}
-      {challenges.length > 0 && (
-        <div className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">Challenges</h2>
-          <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
-            {challenges.map((challenge, i) => (
-              <li key={i}>{challenge}</li>
+      {/* Challenges + Achievements */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+          <h2 className="text-2xl font-semibold mb-3">Challenges</h2>
+          <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2">
+            {challenges.map((item, i) => (
+              <li key={i}>{item}</li>
             ))}
           </ul>
         </div>
-      )}
-
-      {/* Achievements */}
-      {achievements.length > 0 && (
-        <div className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">Achievements</h2>
-          <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300">
+        <div>
+          <h2 className="text-2xl font-semibold mb-3">Achievements</h2>
+          <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2">
             {achievements.map((item, i) => (
               <li key={i}>{item}</li>
             ))}
           </ul>
         </div>
-      )}
+      </div>
 
-      {/* Gallery Images */}
-      {images.length > 0 && (
-        <div className="mb-8">
-          <h2 className="text-xl font-semibold mb-2">Gallery</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {images.map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                alt={`screenshot-${i}`}
-                className="w-full rounded-lg object-cover"
-              />
-            ))}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {images.map((img, i) => (
+          <div
+            key={i}
+            className="w-full h-48 md:h-44 lg:h-48 xl:h-52 overflow-hidden rounded-xl shadow-md border border-gray-200 dark:border-gray-600"
+          >
+            <img
+              src={img}
+              alt={`screenshot-${i}`}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            />
           </div>
-        </div>
-      )}
-
-      {/* Links */}
-      <div className="flex flex-wrap gap-4 mt-6">
-        <a
-          href={sourceCodeLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700"
-        >
-          View Source Code
-        </a>
-        <a
-          href={projectViewLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500"
-        >
-          Visit Live Project
-        </a>
+        ))}
       </div>
     </div>
   );
