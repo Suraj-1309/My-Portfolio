@@ -75,7 +75,7 @@ const Home = ({ isDarkMode }) => {
         <div
           className={`p-3 rounded-3xl shadow-lg ${
             isDarkMode ? "bg-gray-900" : "bg-gray-200"
-          }  flex items-center justify-center`}
+          }  flex items-center justify-center h-fit`}
         >
           <AboutCard isDarkMode={isDarkMode} />
         </div>

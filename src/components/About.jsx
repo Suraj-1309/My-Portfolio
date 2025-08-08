@@ -7,7 +7,7 @@ const AboutCard = ({ isDarkMode }) => {
   const mutedText = isDarkMode ? "text-gray-400" : "text-gray-500";
 
   return (
-    <div className={`rounded-3xl border p-6 shadow-sm ${bgClass} h-full w-full`}>
+    <div className={`rounded-3xl border p-6 shadow-sm ${bgClass} h-fit w-full`}>
       <p className="mb-4">
         Hi, Currently I'm a 18 years old
         <span className={`${accentColor} font-semibold`}>
@@ -30,44 +30,47 @@ const AboutCard = ({ isDarkMode }) => {
       </p>
 
       {/* Signature */}
-      <div className="flex items-center justify-between mt-6">
-        <div className="mt-6 flex flex-col items-start">
-          <p className="text-5xl font-signature">SURAJ</p>
-        </div>
+<div className="flex items-center justify-between mt-4 sm:mt-6">
+  <div className="mt-4 sm:mt-6 flex flex-col items-start">
+    <p className="text-3xl sm:text-5xl font-signature">SURAJ</p>
+  </div>
 
-        <div className="mt-6 flex flex-col items-end">
-          <p className="text-sm font-semibold">FIND ME AT</p>
-          <p className={`text-sm ${mutedText}`}>surajsingch2055@gmail.com</p>
-          <div className="flex gap-4 mt-3 text-xl text-gray-600">
-            {[
-              {
-                icon: FaLinkedin,
-                label: "LinkedIn",
-                href: "https://linkedin.com/in/surajsc1",
-              },
-              {
-                icon: FaGithub,
-                label: "GitHub",
-                href: "https://github.com/Suraj-1309",
-              },
-              {
-                icon: FaEnvelope,
-                label: "Email",
-                href: "mailto:surajsinghch2055@gmail.com",
-              },
-            ].map(({ icon: Icon, label, href }, i) => (
-              <a
-                key={i}
-                href={href}
-                className="group h-10 w-10 p-0 rounded-3xl border border-gray-300 transition-colors duration-300 ease-in-out transform active:translate-y-0.5 hover:bg-gradient-to-b from-[#F7F7F7] to-white hover:shadow-[inset_0_5px_3px_0_#fefefe,inset_0px_-3.5px_3px_0px_#00000040,inset_0_-6px_8px_0_#00000015,inset_0_3px_6px_-2px_#00000030] flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                aria-label={label}
-              >
-                <Icon className="h-5 w-5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
+  <div className="mt-4 sm:mt-6 flex flex-col items-end">
+    <p className="text-xs sm:text-sm font-semibold">FIND ME AT</p>
+    <p className={`text-xs sm:text-sm ${mutedText}`}>
+      surajsingch2055@gmail.com
+    </p>
+    <div className="flex gap-3 sm:gap-4 mt-2 sm:mt-3 text-lg sm:text-xl text-gray-600">
+      {[
+        {
+          icon: FaLinkedin,
+          label: "LinkedIn",
+          href: "https://linkedin.com/in/surajsc1",
+        },
+        {
+          icon: FaGithub,
+          label: "GitHub",
+          href: "https://github.com/Suraj-1309",
+        },
+        {
+          icon: FaEnvelope,
+          label: "Email",
+          href: "mailto:surajsinghch2055@gmail.com",
+        },
+      ].map(({ icon: Icon, label, href }, i) => (
+        <a
+          key={i}
+          href={href}
+          className="group h-8 w-8 sm:h-10 sm:w-10 rounded-3xl border border-gray-300 transition-colors duration-300 ease-in-out transform active:translate-y-0.5 hover:bg-gradient-to-b from-[#F7F7F7] to-white hover:shadow-[inset_0_5px_3px_0_#fefefe,inset_0px_-3.5px_3px_0px_#00000040,inset_0_-6px_8px_0_#00000015,inset_0_3px_6px_-2px_#00000030] flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          aria-label={label}
+        >
+          <Icon className="h-4 w-4 sm:h-5 sm:w-5 group-hover:-translate-y-0.5 transition-transform" />
+        </a>
+      ))}
+    </div>
+  </div>
+</div>
+
     </div>
   );
 };
