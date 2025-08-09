@@ -60,7 +60,7 @@ export default function SkillCard({
         </p>
 
         {/* Button to open modal (if article exists) */}
-        {articleContent && (
+        {/* {articleContent && (
           <button
             onClick={() => {
               setActiveArticle(articleContent);
@@ -84,7 +84,7 @@ export default function SkillCard({
               />
             </svg>
           </button>
-        )}
+        )} */}
       </div>
 
       {/* Modal for article */}

@@ -21,10 +21,10 @@ export default function FakeSkillArticle({ content, isDarkMode, onClose }) {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex flex-col items-center overflow-y-auto ${containerStyle} transition-all duration-500 ease-in-out scrollbar-thin scrollbar-thumb-rounded-md scrollbar-hide`}
+      className={`fixed inset-0 z-50 flex flex-col items-center overflow-y-auto ${containerStyle} transition-all duration-500 ease-in-out scrollbar-thin scrollbar-thumb-rounded-md scrollbar-hide `}
     >
       {/* Sticky Navbar with Close & Check It Out */}
-      <div className="sticky top-10 z-50 mx-auto flex w-full max-w-[calc(1090px)] items-center justify-between rounded-full border border-gray-300 p-2 transition-all ease-in-out duration-700 animate-in fade-in-0 slide-in-from-top-[100%]">
+      <div className="sticky top-10 z-50 mx-auto flex w-full max-w-[calc(1090px)] items-center justify-between rounded-full border border-gray-300 p-2 transition-all ease-in-out duration-700 animate-in fade-in-0 slide-in-from-top-[100%] bg-white dark:bg-black">
         <button
           onClick={onClose}
           type="button"
