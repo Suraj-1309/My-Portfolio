@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SeeMoreCard from "./SeeMoreCard";
 import FakePage from "./FakePage";
 
+
 export default function AchievementCard({ icon, title, points, isDarkMode }) {
   const [showModal, setShowModal] = useState(false);
   const [activeArticle, setActiveArticle] = useState(null); // article content for FakePage
@@ -37,7 +38,7 @@ export default function AchievementCard({ icon, title, points, isDarkMode }) {
   return (
     <>
       {/* Card */}
-      <div className="w-[100vw] -ml-[15vw] sm:w-full sm:ml-0">
+      <div className="w-[94vw] -ml-[8vw] sm:w-full sm:ml-0">
         <div
           className={`w-full p-4 sm:p-6 font-sans border-b sm:border rounded-none sm:rounded-2xl transition-all duration-300 shadow-md ${cardBaseStyle}`}
         >

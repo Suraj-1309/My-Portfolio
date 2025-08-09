@@ -10,7 +10,7 @@ export default function FakeSelected({ content, isDarkMode, onClose }) {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex flex-col items-center overflow-y-auto ${containerStyle} transition-all duration-500 ease-in-out w-full`}
+      className={`fixed inset-0 z-50 flex flex-col items-center overflow-y-auto ${containerStyle} transition-all duration-500 ease-in-out w-full scrollbar-hide`}
     >
       {/* Navbar (UNCHANGED) */}
       <div className="sticky bg-white dark:bg-black top-10 z-50 mx-auto flex w-full max-w-[calc(1090px)] items-center justify-between rounded-full border border-gray-300  p-2 transition-all ease-in-out duration-700 animate-in fade-in-0 slide-in-from-top-[100%] ">
