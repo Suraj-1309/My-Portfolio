@@ -18,6 +18,7 @@ import Pick3 from "./selected_pic/pick_manga3.webp";
 
 // Example data (replace with real data)
 const selectedWorks = [
+  // GPIMS 
   {
     image: GpimsHomePage,
     heading: "GPIMS",
@@ -86,7 +87,7 @@ const selectedWorks = [
     link: "https://gpmis.infy.uk/",
   },
 
-
+  // pick Manga 
   {
     image: PickHome,
     heading: "Pick Manga",
@@ -114,7 +115,7 @@ const selectedWorks = [
     link: "https://suraj-1309.github.io/My-web-dev-pages/manga_review/index.html",
   },
 
-
+  // one home 
   {
     image: OneHome,
     heading: "One Piece Doc",

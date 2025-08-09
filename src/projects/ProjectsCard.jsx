@@ -21,7 +21,9 @@ const ProjectsCard = ({ data, isDarkMode }) => {
 
   const cardBg = isDarkMode ? "bg-gray-700" : "bg-gray-200";
   const textColor = isDarkMode ? "text-blue-500" : "text-orange-500";
-  const buttonBg = isDarkMode ? "bg-blue-500 hover:bg-blue-600" : "bg-orange-500 hover:bg-orange-600";
+  const buttonBg = isDarkMode
+    ? "bg-blue-500 hover:bg-blue-600"
+    : "bg-orange-500 hover:bg-orange-600";
   const headingTextColor = isDarkMode ? "text-white" : "text-gray-900";
   const paragraphTextColor = isDarkMode ? "text-gray-300" : "text-gray-700";
   const tagBg = isDarkMode ? "bg-[#2d2f45]" : "bg-gray-300";
@@ -44,11 +46,14 @@ const ProjectsCard = ({ data, isDarkMode }) => {
         {/* SVG + Heading */}
         <div className="flex items-center gap-3">
           <div className={`sm:text-xl ${textColor}`}>{svg}</div>
-          <h3 className={` sm:text-lg font-semibold ${headingTextColor}`}>{heading}</h3>
+          <h3 className={` sm:text-lg font-semibold ${headingTextColor}`}>
+            {heading}
+          </h3>
         </div>
 
-        {/* Heading Text */}
-        <p className={`text-sm leading-relaxed ${paragraphTextColor}`}>
+        <p
+          className={`text-sm leading-relaxed line-clamp-2 ${paragraphTextColor}`}
+        >
           {headingText}
         </p>
 
