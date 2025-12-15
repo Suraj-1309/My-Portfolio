@@ -1,5 +1,5 @@
 import React from "react";
-import ResumeCard from "../resume_page/ResumeCard";
+import ResumeCard from "../Resume/ResumeCard";
 
 export default function Resume({ isDarkMode }) {
   return (

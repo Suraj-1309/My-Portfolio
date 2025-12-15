@@ -1,31 +1,28 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import AnimatedText from "./components/name.jsx";
-import Resume from "./routes/Resume.jsx";
-import Education from "./routes/Education.jsx";
-import CliButton from "./components/CliButton.jsx";
-import WebTerminal from "./components/WebTerminal.jsx";
-import ProfileImage from "./components/ProfileImage.jsx";
 import AboutCard from "./components/About.jsx";
-import LeftFooterContent from "./Footer/LeftFooterContent.jsx";
-import FooterEnd from "./Footer/FooterEnd.jsx";
-import RightFooterContent from "./Footer/RightFooterContent.jsx";
-import ContactRedirect from "./routes/ContactRedirect.jsx";
-import Experience from "./routes/Experience.jsx";
 import Achievements from "./routes/Achievements.jsx";
-import WorldMap from "./Footer/WorldMap.jsx";
-import MotoStrip from "./components/MotoStrip.jsx";
-import DsaHeading from "./components/DsaHeading.jsx";
-import DsaRight from "./components/DsaRight.jsx";
-import DsaLeft from "./components/DsaLeft.jsx";
-// Placeholder components for the other pages
-import Skills from "./routes/Skills.jsx"; // Importing the Skills route
-import MyExperiments from "./experiment.jsx/MyExperiments.jsx";
-import SelectedWork from "./selectedwork/SelectedWork.jsx";
+import AnimatedText from "./components/name.jsx";
+import CliButton from "./components/CliButton.jsx";
+import Contact from "./routes/Contact.jsx"; // Route
+import Contect from "./Contect/Contect.jsx"; // Component
 import Dsa from "./dsa/Dsa.jsx";
-import Projects from "./projects/Projects.jsx";
+import DsaHeading from "./components/DsaHeading.jsx";
+import DsaLeft from "./components/DsaLeft.jsx";
+import DsaRight from "./components/DsaRight.jsx";
 import DynamicProject from "./projects/DynamicProject.jsx";
-// import DynamicProject from "./projects/DynamicProject.jsx";
+import Education from "./routes/Education.jsx";
+import Experience from "./routes/Experience.jsx";
+import FooterEnd from "./Footer/FooterEnd.jsx";
+import MotoStrip from "./components/MotoStrip.jsx";
+import MyExperiments from "./experiment.jsx/MyExperiments.jsx";
+import ProfileImage from "./components/ProfileImage.jsx";
+import Projects from "./projects/Projects.jsx";
+import Resume from "./routes/Resume.jsx";
+import SelectedWork from "./selectedwork/SelectedWork.jsx";
+import Skills from "./routes/Skills.jsx";
+import WebTerminal from "./components/WebTerminal.jsx";
+import WorldMap from "./Footer/WorldMap.jsx";
 
 const Home = ({ isDarkMode }) => {
   const [showCli, setShowCli] = useState(false);
@@ -53,7 +50,6 @@ const Home = ({ isDarkMode }) => {
             <AnimatedText text="suraj." isDarkMode={isDarkMode} />
           </div>
         </div>
-        
         {/* Second Column for Activate CLI Button */}
         {/* order-1 for mobile to place it above name, order-2 for desktop to place it on right */}
         <div className="order-2 md:order-2 pb-8">
@@ -140,16 +136,7 @@ const Home = ({ isDarkMode }) => {
 
         {/* Content Overlay */}
         <div className="relative z-10">
-          {/* Grid for Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-8">
-            <div className="p-4 bg-opacity-90 flex flex-col justify-center items-center text-center">
-              <LeftFooterContent isDarkMode={isDarkMode} />
-            </div>
-
-            <div className="hidden md:flex p-4 flex-col justify-center items-center text-center">
-              <RightFooterContent isDarkMode={isDarkMode} />
-            </div>
-          </div>
+          <Contect isDarkMode={isDarkMode}/>
 
           {/* World Map Component */}
           <div className="w-full mt-8 relative z-0">
@@ -169,10 +156,7 @@ const Home = ({ isDarkMode }) => {
   );
 };
 
-/**
- * AppRoutes component that defines all application routes.
- * It takes the isDarkMode prop and passes it to the page components.
- */
+//  AppRoutes component that defines all application routes. It takes the isDarkMode prop and passes it to the page components.
 export default function AppRoutes({ isDarkMode }) {
   return (
     <Routes>
@@ -199,8 +183,8 @@ export default function AppRoutes({ isDarkMode }) {
         path="/experience"
         element={<Experience isDarkMode={isDarkMode} />}
       />
-      <Route path="/contact" element={<ContactRedirect />} />
 
+      <Route path="/contact" element={<Contact />} />
       <Route path="/resume" element={<Resume isDarkMode={isDarkMode} />} />
     </Routes>
   );

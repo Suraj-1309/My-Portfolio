@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import { FaPaperPlane } from 'react-icons/fa';
 
 const RightFooterContent = ({ isDarkMode }) => {
@@ -18,8 +19,26 @@ const RightFooterContent = ({ isDarkMode }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Message sent!');
-    setFormData({ name: '', email: '', message: '' });
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAIL_PUBLIC_KEY
+      )
+      .then(() => {
+        alert('Message sent!');
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch((error) => {
+        console.error(error);
+        alert('Failed to send message. Please try again later.');
+      })
   };
 
   const inputStyle = `w-full rounded-md px-4 py-2 mb-4 outline-none transition-colors duration-300 ${
@@ -43,7 +62,9 @@ const RightFooterContent = ({ isDarkMode }) => {
       >
         Send a Message
       </h2>
+      <div className='relative z-20 pointer-events-auto'>
 
+      
       <form onSubmit={handleSubmit} className="flex flex-col">
         <input
           type="text"
@@ -79,6 +100,7 @@ const RightFooterContent = ({ isDarkMode }) => {
           Send Message <FaPaperPlane />
         </button>
       </form>
+      </div>
     </div>
   );
 };

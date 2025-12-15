@@ -1,8 +1,7 @@
-// routes/ContactRedirect.jsx
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function ContactRedirect() {
+export default function Contact() {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -15,7 +14,7 @@ export default function ContactRedirect() {
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
-    }, 100); // 100ms delay gives React time to render the home page
+    }, 200);
 
     return () => clearTimeout(timeout);
   }, [navigate]);
