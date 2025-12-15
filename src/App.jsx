@@ -11,6 +11,7 @@ export default function App() {
 
   const toggleTheme = () => setIsDarkMode((prev) => !prev);
   const toggleCli = () => setShowCli(!showCli);
+
   // Effect to apply the theme class to the body element
   useEffect(() => {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
@@ -30,7 +31,7 @@ export default function App() {
     >
       <CustomCursor />
 
-      {/* NEW: Render the NavSection component at the top */}
+      {/* Render the NavSection component at the top */}
       <NavSection isDarkMode={isDarkMode} toggleDarkMode={toggleTheme} />
 
 

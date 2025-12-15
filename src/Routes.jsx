@@ -200,8 +200,8 @@ export default function AppRoutes({ isDarkMode }) {
         element={<Experience isDarkMode={isDarkMode} />}
       />
       <Route path="/contact" element={<ContactRedirect />} />
+
       <Route path="/resume" element={<Resume isDarkMode={isDarkMode} />} />
-      {/* Add other routes here */}
     </Routes>
   );
 }

@@ -33,7 +33,7 @@ const WorldMap = () => {
 
   return (
     <div className="relative w-full rounded-[30px] bg-white shadow-md overflow-hidden border border-gray-200 w-full h-[200px] sm:h-[360px] md:h-[420px]">
-      {/* 👇 Cursor behavior applied here */}
+      {/* Cursor behavior applied here */}
       <div
         onMouseDown={() => setIsDragging(true)}
         onMouseUp={() => setIsDragging(false)}
