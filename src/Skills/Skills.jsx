@@ -1,5 +1,5 @@
 import React from "react";
-import SkillCard from "../skills/SkillCard";
+import SkillCard from "../Skills/SkillCard";
 import { FaCode, FaReact } from "react-icons/fa";
 import { MdScreenshotMonitor } from "react-icons/md";
 import { FiTool } from "react-icons/fi";
@@ -13,10 +13,10 @@ import {
   SiJupyter,
 } from "react-icons/si";
 import { FaDatabase } from "react-icons/fa6";
-import SkillsHeaderCard from "../skills/SkillHeader";
+import SkillsHeaderCard from "./SkillHeader";
 
 
-import LanguagesSkill from "../skills/LanguagesSkill";
+import LanguagesSkill from "./LanguagesSkill";
 
 export default function Skills({ isDarkMode }) {
   const LanguageHtml = {
@@ -500,6 +500,7 @@ export default function Skills({ isDarkMode }) {
         <VscCopilot className="h-6 w-6 sm:h-7 sm:w-7" />
         <span>AI Tools</span>
       </div>
+      
       {/* Skill Cards Grid */}
       <div className="w-full px-8 pb-8">
         <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">

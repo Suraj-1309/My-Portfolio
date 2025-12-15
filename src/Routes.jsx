@@ -19,7 +19,7 @@ import ProfileImage from "./components/ProfileImage.jsx";
 import ProjectRoute from "./routes/ProjectRoute.jsx";
 import ResumeRoute from "./routes/ResumeRoute.jsx";
 import SelectedWork from "./selectedwork/SelectedWork.jsx";
-import Skills from "./routes/Skills.jsx";
+import Skills from "./routes/SkillsRoute.jsx";
 import WebTerminal from "./components/WebTerminal.jsx";
 import WorldMap from "./Footer/WorldMap.jsx";
 
@@ -160,8 +160,8 @@ export default function AppRoutes({ isDarkMode }) {
   return (
     <Routes>
       <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
-      <Route path="/skills" element={<Skills isDarkMode={isDarkMode} />} />
 
+      <Route path="/skills" element={<Skills isDarkMode={isDarkMode} />} />
       <Route path="/projects" element={<ProjectRoute isDarkMode={isDarkMode} />}/>
       <Route path="/projects/:id" element={<ProjectRoute isDarkMode={isDarkMode} />} />
       <Route path="/education" element={<EducationRoute isDarkMode={isDarkMode} />} />
