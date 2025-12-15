@@ -1,18 +1,18 @@
 // ProjectsData.jsx
 import { MdScreenshotMonitor } from "react-icons/md";
-import GpimsHomePage from "../selectedwork/selected_pic/gpims_homepage.webp";
-import GpimsDiagram from "../selectedwork/selected_pic/gpims_diagram.webp";
-import Gpims1 from "../selectedwork/selected_pic/gpims1.webp";
-import Gpims2 from "../selectedwork/selected_pic/gpims2.webp";
+import GpimsHomePage from "../Home/components/Selectedwork/selected_pic/gpims_homepage.webp";
+import GpimsDiagram from "../Home/components/Selectedwork/selected_pic/gpims_diagram.webp";
+import Gpims1 from "../Home/components/Selectedwork/selected_pic/gpims1.webp";
+import Gpims2 from "../Home/components/Selectedwork/selected_pic/gpims2.webp";
 
-import OneHome from "../selectedwork/selected_pic/one_piece_homepage.webp";
-import One1 from "../selectedwork/selected_pic/one_piece1.webp";
-import One2 from "../selectedwork/selected_pic/one_piece2.webp";
+import OneHome from "../Home/components/Selectedwork/selected_pic/one_piece_homepage.webp";
+import One1 from "../Home/components/Selectedwork/selected_pic/one_piece1.webp";
+import One2 from "../Home/components/Selectedwork/selected_pic/one_piece2.webp";
 
-import PickHome from "../selectedwork/selected_pic/pick_manga_homepage.webp";
-import Pick1 from "../selectedwork/selected_pic/pick_manga1.webp";
-import Pick2 from "../selectedwork/selected_pic/pick_manga2.webp";
-import Pick3 from "../selectedwork/selected_pic/pick_manga3.webp";
+import PickHome from "../Home/components/Selectedwork/selected_pic/pick_manga_homepage.webp";
+import Pick1 from "../Home/components/Selectedwork/selected_pic/pick_manga1.webp";
+import Pick2 from "../Home/components/Selectedwork/selected_pic/pick_manga2.webp";
+import Pick3 from "../Home/components/Selectedwork/selected_pic/pick_manga3.webp";
 
 const projectData = [
   {

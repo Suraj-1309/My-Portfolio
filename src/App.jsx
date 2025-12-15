@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import NavSection from "./components/NavSection.jsx";
-import CustomCursor from "./components/CustomCursor.jsx";
+import NavSection from "./Nevbar/NavSection.jsx";
+import CustomCursor from "./Nevbar/CustomCursor.jsx";
 import AppRoutes from "./Routes.jsx";
 
 // The main App component that handles the theme and renders the AnimatedText

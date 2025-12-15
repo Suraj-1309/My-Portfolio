@@ -1,8 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useMediaQuery } from "react-responsive";
-import ToggleBgButton from "./ToggleBgButton";
-import { HashLink } from "react-router-hash-link";
-import { useLocation } from "react-router-dom";
 
 export default function WebTerminal({ onClose }) {
   // CLI output history
