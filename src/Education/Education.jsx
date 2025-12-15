@@ -1,5 +1,5 @@
 import React from "react";
-import EducationCard from "../education_page/EducationCard";
+import EducationCard from "../Education/EducationCard";
 
 export default function Education({ isDarkMode }) {
   const educationCardsData = [
@@ -12,7 +12,7 @@ export default function Education({ isDarkMode }) {
         "I am pursuing a Bachelor's in CSE at GBPUAT where I learn various aspects of computer science and engineering.",
       linkText: "gbpuat.ac.in",
       linkUrl: "https://gbpuat.ac.in",
-      score: "CGPA: Currently Persuing", // <-- added
+      score: "CGPA: Currently Persuing",
     },
     {
       title: "Diploma in Computer Science & Eng.",
@@ -22,7 +22,7 @@ export default function Education({ isDarkMode }) {
         "Completed Minor Degree in CSE focusing on Programming, Web Development and various core subjects like DBMS, CNS, DSA, OOPs, Operating Systems and so etc.",
       linkText: "@gpdehradun.org.in",
       linkUrl: "https://gpdehradun.org.in/",
-      score: "CPGA: 9.5/10", // <-- added
+      score: "CPGA: 9.5/10",
     },
     {
       title: "XII(PCM)",
@@ -32,7 +32,7 @@ export default function Education({ isDarkMode }) {
         "Completed intermediate study with Physics, Chemistry, Math. End year of my school life here meet love of my life and my first friend.",
       linkText: "@ukboard.nic.in",
       linkUrl: "https://uaresults.nic.in/",
-      score: "Percentage: 85%", // <-- added
+      score: "Percentage: 85%",
     },
     {
       title: "X th",
@@ -42,7 +42,7 @@ export default function Education({ isDarkMode }) {
         "Completed My basic education with Math, Science, Social Science, English, Hindi, Sanskrit.",
       linkText: "@ukboard.nic.in",
       linkUrl: "https://uaresults.nic.in/",
-      score: "CPGA: 96%", // <-- added
+      score: "CPGA: 96%",
     },
   ];
   return (
@@ -99,7 +99,7 @@ export default function Education({ isDarkMode }) {
         ))}
       </div>
 
-      {/* End Message & Button */}
+
       <div className="text-center mt-6 px-4">
         <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300">
           Thanks for viewing this section! You can explore more by clicking the

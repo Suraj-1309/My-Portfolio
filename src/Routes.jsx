@@ -11,7 +11,7 @@ import DsaLeft from "./components/DsaLeft.jsx";
 import DsaRight from "./components/DsaRight.jsx";
 import DSARoute from "./routes/DSARoute.jsx";
 import DynamicProject from "./projects/DynamicProject.jsx";
-import Education from "./routes/Education.jsx";
+import EducationRoute from "./routes/EducationRoute.jsx";
 import ExperienceRoute from "./routes/ExperienceRoute.jsx";
 import FooterEnd from "./Footer/FooterEnd.jsx";
 import MotoStrip from "./components/MotoStrip.jsx";
@@ -168,11 +168,8 @@ export default function AppRoutes({ isDarkMode }) {
         element={<DynamicProject isDarkMode={isDarkMode} />}
       />
 
-      <Route
-        path="/education"
-        element={<Education isDarkMode={isDarkMode} />}
-      />
 
+      <Route path="/education" element={<EducationRoute isDarkMode={isDarkMode} />} />
       <Route path="/experience"element={<ExperienceRoute isDarkMode={isDarkMode} />} />
       <Route path="/dsa" element={<DSARoute isDarkMode={isDarkMode} />} />
       <Route path="/achievements" element={<AchievementsRoute isDarkMode={isDarkMode} />}/>
