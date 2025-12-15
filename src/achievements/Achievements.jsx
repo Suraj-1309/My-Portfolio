@@ -1,10 +1,10 @@
 import React from "react";
-import AchievementCard from "../achievements/AchievementCard";
+import AchievementCard from "./AchievementCard";
 import { FaCode, FaCertificate, FaStar, FaTrophy } from "react-icons/fa";
-import ossDev from "../achievements/oss/fcc_dev.webp";
-import gpimsLead from "../achievements/leadership/gpims_homepage.webp";
+import ossDev from "./assets/oss/fcc_dev.webp";
+import gpimsLead from "./assets/leadership/gpims_homepage.webp";
 import { title } from "framer-motion/client";
-import postCert from "../achievements/certificate/postman.png";
+import postCert from "./assets/certificate/postman.png";
 
 const achievementData = [
   // compitive programming
@@ -163,4 +163,4 @@ export default function Achievements({ isDarkMode }) {
       </div>
     </section>
   );
-}
+} 

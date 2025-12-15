@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import AboutCard from "./components/About.jsx";
-import Achievements from "./routes/Achievements.jsx";
+import AchievementsRoute from "./routes/AchievementsRoute.jsx";
 import AnimatedText from "./components/name.jsx";
 import CliButton from "./components/CliButton.jsx";
-import Contact from "./routes/Contact.jsx"; // Route
+import ContactRoute from "./routes/ContactRoute.jsx"; // Route
 import Contect from "./Contect/Contect.jsx"; // Component
 import Dsa from "./dsa/Dsa.jsx";
 import DsaHeading from "./components/DsaHeading.jsx";
@@ -18,7 +18,7 @@ import MotoStrip from "./components/MotoStrip.jsx";
 import MyExperiments from "./experiment.jsx/MyExperiments.jsx";
 import ProfileImage from "./components/ProfileImage.jsx";
 import Projects from "./projects/Projects.jsx";
-import Resume from "./routes/Resume.jsx";
+import ResumeRoute from "./routes/ResumeRoute.jsx";
 import SelectedWork from "./selectedwork/SelectedWork.jsx";
 import Skills from "./routes/Skills.jsx";
 import WebTerminal from "./components/WebTerminal.jsx";
@@ -121,7 +121,7 @@ const Home = ({ isDarkMode }) => {
         id="achievements"
         className="relative mt-8 scroll-mt-16 md:scroll-mt-24"
       >
-        <Achievements isDarkMode={isDarkMode} />
+        <AchievementsRoute isDarkMode={isDarkMode} />
       </div>
 
       {/* Footer Section with World Map Background */}
@@ -136,7 +136,7 @@ const Home = ({ isDarkMode }) => {
 
         {/* Content Overlay */}
         <div className="relative z-10">
-          <Contect isDarkMode={isDarkMode}/>
+          <Contect isDarkMode={isDarkMode} />
 
           {/* World Map Component */}
           <div className="w-full mt-8 relative z-0">
@@ -173,19 +173,15 @@ export default function AppRoutes({ isDarkMode }) {
         element={<Education isDarkMode={isDarkMode} />}
       />
 
-      <Route
-        path="/achievements"
-        element={<Achievements isDarkMode={isDarkMode} />}
-      />
-
       <Route path="/dsa" element={<Dsa isDarkMode={isDarkMode} />} />
       <Route
         path="/experience"
         element={<Experience isDarkMode={isDarkMode} />}
       />
 
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/resume" element={<Resume isDarkMode={isDarkMode} />} />
+      <Route path="/achievements" element={<AchievementsRoute isDarkMode={isDarkMode} />}/>
+      <Route path="/contact" element={<ContactRoute />} />
+      <Route path="/resume" element={<ResumeRoute isDarkMode={isDarkMode} />} />
     </Routes>
   );
 }
