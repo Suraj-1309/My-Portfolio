@@ -10,14 +10,13 @@ import DsaHeading from "./components/DsaHeading.jsx";
 import DsaLeft from "./components/DsaLeft.jsx";
 import DsaRight from "./components/DsaRight.jsx";
 import DSARoute from "./routes/DSARoute.jsx";
-import DynamicProject from "./projects/DynamicProject.jsx";
 import EducationRoute from "./routes/EducationRoute.jsx";
 import ExperienceRoute from "./routes/ExperienceRoute.jsx";
 import FooterEnd from "./Footer/FooterEnd.jsx";
 import MotoStrip from "./components/MotoStrip.jsx";
 import MyExperiments from "./experiment.jsx/MyExperiments.jsx";
 import ProfileImage from "./components/ProfileImage.jsx";
-import Projects from "./projects/Projects.jsx";
+import ProjectRoute from "./routes/ProjectRoute.jsx";
 import ResumeRoute from "./routes/ResumeRoute.jsx";
 import SelectedWork from "./selectedwork/SelectedWork.jsx";
 import Skills from "./routes/Skills.jsx";
@@ -162,17 +161,13 @@ export default function AppRoutes({ isDarkMode }) {
     <Routes>
       <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
       <Route path="/skills" element={<Skills isDarkMode={isDarkMode} />} />
-      <Route path="/projects" element={<Projects isDarkMode={isDarkMode} />} />
-      <Route
-        path="/projects/:id"
-        element={<DynamicProject isDarkMode={isDarkMode} />}
-      />
 
-
+      <Route path="/projects" element={<ProjectRoute isDarkMode={isDarkMode} />}/>
+      <Route path="/projects/:id" element={<ProjectRoute isDarkMode={isDarkMode} />} />
       <Route path="/education" element={<EducationRoute isDarkMode={isDarkMode} />} />
-      <Route path="/experience"element={<ExperienceRoute isDarkMode={isDarkMode} />} />
+      <Route path="/experience" element={<ExperienceRoute isDarkMode={isDarkMode} />} />
       <Route path="/dsa" element={<DSARoute isDarkMode={isDarkMode} />} />
-      <Route path="/achievements" element={<AchievementsRoute isDarkMode={isDarkMode} />}/>
+      <Route path="/achievements" element={<AchievementsRoute isDarkMode={isDarkMode} />} />
       <Route path="/contact" element={<ContactRoute />} />
       <Route path="/resume" element={<ResumeRoute isDarkMode={isDarkMode} />} />
     </Routes>
