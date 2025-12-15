@@ -1,5 +1,5 @@
 import React from "react";
-// import profileImage from "../assets/profile.png"; // Replace with your image path
+
 import LeetCodeCircle from "./LeetCodeCircle";
 import LeetCodeGraph from "./LeetCodeGraph";
 

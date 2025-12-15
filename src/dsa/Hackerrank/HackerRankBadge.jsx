@@ -18,12 +18,10 @@ export default function HackerrankBadge() {
     Djs,
     Sql,
     C,
-    // Replace or add more actual badge images here
   ];
 
   return (
     <div className="w-full">
-      {/* Heading with SVG */}
       <div className="flex items-center gap-3 mb-6 pl-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"

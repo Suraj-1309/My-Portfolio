@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SeeMoreCard from "./SeeMoreCard";
 import FakePage from "./FakePage";
+import SeeMoreCard from "./SeeMoreCard";
 
 
 export default function AchievementCard({ icon, title, points, isDarkMode }) {

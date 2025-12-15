@@ -3,6 +3,7 @@ import HackerrankBadge from "./HackerRankBadge";
 export default function Hackerrank({ isDarkMode }) {
   return (
     <div className="flex flex-col lg:flex-row gap-6">
+
       {/* Left: Profile and Ranks */}
       <div className="lg:w-1/3 w-full flex flex-col gap-6 w-full">
         <a
@@ -65,7 +66,6 @@ export default function Hackerrank({ isDarkMode }) {
         </div>
       </div>
 
-      {/* Right: Badges */}
       {/* Right: Badges */}
       <div className="w-full border-2 rounded-xl p-4">
         <HackerrankBadge isDarkMode={isDarkMode} />
