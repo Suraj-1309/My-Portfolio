@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const AboutCard = ({ isDarkMode }) => {
@@ -6,10 +6,24 @@ const AboutCard = ({ isDarkMode }) => {
   const accentColor = isDarkMode ? "text-blue-400" : "text-orange-500";
   const mutedText = isDarkMode ? "text-gray-400" : "text-gray-500";
 
+
+   const [age, setAge] = useState(18);
+    useEffect(() => {
+    const birthDate = new Date(2006, 8, 13);
+    const today = new Date();
+    let calculatedAge = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+      calculatedAge--;
+    }
+    setAge(calculatedAge);
+  }, 1000);
+
+  
   return (
     <div className={`rounded-3xl border p-6 shadow-sm ${bgClass} h-fit w-full`}>
       <p className="mb-4">
-        Hi, Currently I'm a 18 years old
+        Hi, Currently I'm a {age} years old and 
         <span className={`${accentColor} font-semibold`}>
           {" "}2nd year Student at GBPUAT in Computer Engg{" "}
         </span>
