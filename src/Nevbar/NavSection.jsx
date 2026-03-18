@@ -16,7 +16,6 @@ export default function NavSection({ isDarkMode, toggleDarkMode }) {
     { name: "Education", href: "/education" },
     { name: "Experience", href: "/experience" },
     { name: "DSA", href: "/dsa" },
-    { name: "Achievements", href: "/#achievements" },
     { name: "Contact", href: "/#contact" },
     { name: "Resume", href: "/resume" },
   ];

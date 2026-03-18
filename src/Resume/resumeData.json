@@ -1,0 +1,139 @@
+{
+  "documentTitle": "Suraj-Resume",
+  "resumeLink": "https://drive.google.com/file/d/1xUbjNh_IKY707ujisCx16QF7BkCIYgbR/view?usp=drive_link",
+  "resumeLinkText": "View/Download Resume",
+  "sidebarSections": [
+    {
+      "id": "summary",
+      "label": "Summary"
+    },
+    {
+      "id": "education",
+      "label": "Education"
+    },
+    {
+      "id": "technical-skills",
+      "label": "Skills"
+    },
+    {
+      "id": "projects",
+      "label": "Projects"
+    },
+    {
+      "id": "achievement",
+      "label": "Achievements"
+    }
+  ],
+  "header": {
+    "name": "Suraj Singh Chauhan",
+    "contact": "+91-8445304894 | surajsinghch2055@gmail.com",
+    "profiles": [
+      {
+        "label": "Linkedin",
+        "url": "https://linkedin.com/in/surajscl"
+      },
+      {
+        "label": "Github",
+        "url": "https://github.com/Suraj-1309"
+      }
+    ]
+  },
+  "summary": {
+    "title": "SUMMARY",
+    "text": "Highly motivated Computer Science & Engineering student with a strong academic record and a passion for problem-solving. Solved over 1000+ coding problems across LeetCode, HackerRank, and GeeksforGeeks. Also have good knowledge of frontend development using HTML, CSS, and JavaScript. Seeking a challenging software engineering internship at a tech company to apply and expand my skills in building scalable and efficient systems."
+  },
+  "education": {
+    "title": "EDUCATION",
+    "items": [
+      {
+        "degree": "BTech in Computer Engineering",
+        "institution": "Govind Ballabh Pant University of Agri. & Tech. Pantnagar",
+        "year": "2025 (Currently pursuing)",
+        "score": ""
+      },
+      {
+        "degree": "Diploma in Computer Science & Engineering",
+        "institution": "Govt. Polytechnic Dehradun",
+        "year": "2023",
+        "score": "10 CGPA"
+      },
+      {
+        "degree": "Class XII",
+        "institution": "Govt Inter College Devprayag, Pauri Garhwal",
+        "year": "2021",
+        "score": "85%"
+      },
+      {
+        "degree": "Class X",
+        "institution": "Govt Inter College Devprayag, Pauri Garhwal",
+        "year": "2021",
+        "score": "96%"
+      }
+    ]
+  },
+  "technicalSkills": {
+    "title": "TECHNICAL SKILLS",
+    "items": [
+      {
+        "label": "Languages",
+        "value": "C++, C, Java, Python, JavaScript, Rust, PHP"
+      },
+      {
+        "label": "Frontend",
+        "value": "HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, jQuery"
+      },
+      {
+        "label": "Backend",
+        "value": "PHP, MySQL"
+      },
+      {
+        "label": "Tools & Technologies",
+        "value": "Git, GitHub"
+      }
+    ]
+  },
+  "projects": {
+    "title": "PROJECTS",
+    "items": [
+      {
+        "name": "Government Polytechnic Inventory Management System (GPIMS)",
+        "technologies": "Technologies: HTML, CSS, JavaScript, PHP, MySQL, Git",
+        "points": [
+          "Developed a real-time inventory management system for college use, serving multiple user roles with distinct data access permissions including Admin, Stock Officer, Stock Manager, and Lab Incharge.",
+          "Led a small team, managed project scope, resolved conflicts over implementation ideas, and ensured all milestones were met before deadlines.",
+          "Utilized HTML, CSS, JavaScript, PHP, and MySQL for development, with Git for version control."
+        ]
+      },
+      {
+        "name": "Practice Web Pages",
+        "technologies": "Technologies: HTML, CSS, JavaScript, Bootstrap, Tailwind CSS",
+        "points": [
+          "Designed and developed dynamic and responsive web pages to hone fundamental frontend skills.",
+          "Applied principles of responsive design and user experience to reach more people.",
+          "Focused on creating intuitive and visually appealing user interfaces with animation."
+        ]
+      }
+    ]
+  },
+  "achievements": {
+    "title": "ACHIEVEMENTS",
+    "items": [
+      {
+        "label": "LeetCode",
+        "detail": "Solved 200+ Data Structures and Algorithms problems."
+      },
+      {
+        "label": "GeeksforGeeks",
+        "detail": "Solved 750+ DSA problems; Overall Ranking: 29,000."
+      },
+      {
+        "label": "HackerRank",
+        "detail": "Earned 5-star badges in C, C++, SQL, and Python; 4-star in JavaScript; 2-star in Java."
+      },
+      {
+        "label": "Total",
+        "detail": "Solved 1000+ coding problems across LeetCode, GeeksforGeeks, and HackerRank."
+      }
+    ]
+  }
+}

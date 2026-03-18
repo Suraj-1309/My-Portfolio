@@ -1,6 +1,4 @@
-import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import AchievementsRoute from "./routes/AchievementsRoute.jsx";
 import ContactRoute from "./routes/ContactRoute.jsx"; // Route
 import DSARoute from "./routes/DSARoute.jsx";
 import EducationRoute from "./routes/EducationRoute.jsx";
@@ -21,7 +19,6 @@ export default function AppRoutes({ isDarkMode }) {
       <Route path="/education" element={<EducationRoute isDarkMode={isDarkMode} />} />
       <Route path="/experience" element={<ExperienceRoute isDarkMode={isDarkMode} />} />
       <Route path="/dsa" element={<DSARoute isDarkMode={isDarkMode} />} />
-      <Route path="/achievements" element={<AchievementsRoute isDarkMode={isDarkMode} />} />
       <Route path="/contact" element={<ContactRoute />} />
       <Route path="/resume" element={<ResumeRoute isDarkMode={isDarkMode} />} />
     </Routes>
