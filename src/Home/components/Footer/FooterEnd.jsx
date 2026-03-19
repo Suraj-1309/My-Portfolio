@@ -22,7 +22,7 @@ const FooterEnd = ({ isDarkMode }) => {
         </a>
       </div>
       <p className={`mt-2 text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-        © 2025 CodeVamp Innovations. All rights reserved.
+        © 2025  Seven LLC. All rights reserved.
       </p>
     </footer>
   );

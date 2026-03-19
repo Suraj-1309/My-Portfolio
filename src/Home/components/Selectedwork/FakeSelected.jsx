@@ -13,7 +13,7 @@ export default function FakeSelected({ content, isDarkMode, onClose }) {
       className={`fixed inset-0 z-50 flex flex-col items-center overflow-y-auto ${containerStyle} transition-all duration-500 ease-in-out w-full scrollbar-hide`}
     >
       {/* Navbar (UNCHANGED) */}
-      <div className="sticky bg-white dark:bg-black top-10 z-50 mx-auto flex w-full max-w-[calc(1090px)] items-center justify-between rounded-full border border-gray-300  p-2 transition-all ease-in-out duration-700 animate-in fade-in-0 slide-in-from-top-[100%] ">
+      <div className="sticky bg-white dark:bg-black top-3 sm:top-6 z-50 mx-auto flex w-[calc(100%-1rem)] sm:w-full max-w-[1090px] items-center justify-between rounded-full border border-gray-300 p-2 transition-all ease-in-out duration-700 animate-in fade-in-0 slide-in-from-top-[100%]">
         <button
           onClick={onClose}
           type="button"
@@ -27,28 +27,30 @@ export default function FakeSelected({ content, isDarkMode, onClose }) {
           href={link || "#"}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-orange-600 text-white hover:bg-blue-500/90 h-10 px-4 py-2 items-center group/button transition-all"
+          className="inline-flex justify-center whitespace-nowrap rounded-full text-xs sm:text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-orange-600 text-white hover:bg-blue-500/90 h-9 sm:h-10 px-3 sm:px-4 py-2 items-center group/button transition-all"
         >
-          <span className="inline-block -translate-y-0.5 text-lg font-medium leading-none group-hover/button:translate-y-0 transition-transform">
+          <span className="inline-block -translate-y-0.5 text-base sm:text-lg font-medium leading-none group-hover/button:translate-y-0 transition-transform">
             Check It Out
           </span>
         </a>
       </div>
 
       {/* Article Content */}
-      <div className="max-w-4xl w-full px-6 py-20">
+      <div className="max-w-4xl w-full px-4 sm:px-6 py-12 sm:py-20">
         {/* Heading */}
-        {heading && <h1 className="text-3xl font-bold mb-6">{heading}</h1>}
+        {heading && (
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6">{heading}</h1>
+        )}
 
         {/* Images Scrollable Row */}
         {images.length > 0 && (
-          <div className="flex overflow-x-auto gap-4 mb-10 scrollbar-thin scrollbar-thumb-rounded-md scrollbar-thumb-gray-400">
+          <div className="flex overflow-x-auto gap-3 sm:gap-4 mb-10 scrollbar-thin scrollbar-thumb-rounded-md scrollbar-thumb-gray-400">
             {images.map((src, idx) => (
               <img
                 key={idx}
                 src={src}
                 alt={`article-image-${idx}`}
-                className="rounded-xl h-60 w-auto object-cover flex-shrink-0"
+                className="rounded-xl h-48 sm:h-60 w-auto object-cover flex-shrink-0"
               />
             ))}
           </div>
@@ -58,9 +60,13 @@ export default function FakeSelected({ content, isDarkMode, onClose }) {
         {subheadings.map((section, idx) => (
           <div key={idx} className="mb-8">
             {section.title && (
-              <h2 className="text-2xl font-semibold mb-2">{section.title}</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold mb-2">
+                {section.title}
+              </h2>
             )}
-            {section.text && <p className="text-base mb-2">{section.text}</p>}
+            {section.text && (
+              <p className="text-sm sm:text-base mb-2">{section.text}</p>
+            )}
             <hr className="border-gray-400 my-4" />
           </div>
         ))}

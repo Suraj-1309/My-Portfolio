@@ -19,15 +19,17 @@ const ExperimentCard = ({
     <a href={href} target="_blank" rel="noopener noreferrer">
       <motion.div
         whileHover={{ background: hoverBg }}
-        className={`group relative w-full rounded-2xl p-5 shadow-lg border-8 border-double ${borderColor} transition-all duration-300 overflow-hidden`}
+        className={`group relative w-full rounded-2xl p-4 sm:p-5 pr-24 sm:pr-32 shadow-lg border-8 border-double ${borderColor} transition-all duration-300 overflow-hidden`}
         style={{ background: baseBgColor }} // This ensures dark mode starts with black background
       >
         {/* Text Content */}
         <div>
-          <h2 className={`text-3xl font-semibold ${textColor} pb-4`}>
+          <h2
+            className={`text-2xl sm:text-3xl font-semibold ${textColor} pb-3 sm:pb-4`}
+          >
             {title}
           </h2>
-          <p className={`text-base font-semibold ${subTextColor}`}>
+          <p className={`text-sm sm:text-base font-semibold ${subTextColor}`}>
             {subtitle}
           </p>
         </div>
@@ -37,7 +39,7 @@ const ExperimentCard = ({
           initial={{ rotate: -12, y: 0 }}
           whileHover={{ rotate: 0, y: -10 }}
           transition={{ type: "spring", stiffness: 100 }}
-          className="absolute top-4 right-2 w-40 h-36 opacity-80"
+          className="absolute top-2 sm:top-4 right-2 w-20 h-20 sm:w-32 sm:h-28 md:w-36 md:h-32 opacity-70 sm:opacity-80"
         >
           {svg}
         </motion.div>

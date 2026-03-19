@@ -32,13 +32,13 @@ const WorldMap = () => {
   const pathGen = geoPath().projection(projection);
 
   return (
-    <div className="relative w-full rounded-[30px] bg-white shadow-md overflow-hidden border border-gray-200 w-full h-[200px] sm:h-[360px] md:h-[420px]">
+    <div className="relative w-full rounded-[20px] sm:rounded-[30px] bg-white shadow-md overflow-hidden border border-gray-200 h-[220px] sm:h-[360px] md:h-[420px]">
       {/* Cursor behavior applied here */}
       <div
         onMouseDown={() => setIsDragging(true)}
         onMouseUp={() => setIsDragging(false)}
         onMouseLeave={() => setIsDragging(false)}
-        className={`${isDragging ? "cursor-grabbing" : "cursor-grab"} w-full h-[180px] sm:h-[400px] md:h-[420px] md:-mt-8`}
+        className={`${isDragging ? "cursor-grabbing" : "cursor-grab"} w-full h-[220px] sm:h-[360px] md:h-[420px]`}
       >
         <ComposableMap
           projectionConfig={{ scale: 200 }}
@@ -88,7 +88,8 @@ const WorldMap = () => {
                     {/* Highlight Rectangle */}
                     {selectedGeo &&
                       (() => {
-                        const [[x0, y0], [x1, y1]] = pathGen.bounds(selectedGeo);
+                        const [[x0, y0], [x1, y1]] =
+                          pathGen.bounds(selectedGeo);
                         const width = x1 - x0;
                         const height = y1 - y0;
 
@@ -154,7 +155,7 @@ const WorldMap = () => {
       </div>
 
       {/* Label */}
-      <div className="absolute bottom-3 right-4 text-[15px] text-gray-400 italic">
+      <div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-4 text-xs sm:text-[15px] text-gray-400 italic">
         Currently I live in
       </div>
     </div>

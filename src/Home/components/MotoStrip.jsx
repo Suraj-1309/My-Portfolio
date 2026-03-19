@@ -29,7 +29,7 @@ const MotoStrip = ({ isDarkMode }) => {
 
   return (
     <div
-      className={`relative w-screen h-20 overflow-hidden text-white ${
+      className={`relative w-full h-16 sm:h-20 overflow-hidden text-white rounded-2xl ${
         isDarkMode ? "bg-blue-400" : "bg-orange-500"
       }`}
     >
@@ -37,7 +37,7 @@ const MotoStrip = ({ isDarkMode }) => {
       {prevIndex !== null && (
         <p
           key={`prev-${prevIndex}`}
-          className="absolute inset-0 flex items-center justify-center text-lg sm:text-xl md:text-2xl italic font-bold transition-all duration-500 ease-in-out"
+          className="absolute inset-0 px-3 text-center flex items-center justify-center text-sm sm:text-xl md:text-2xl italic font-bold transition-all duration-500 ease-in-out"
           style={{
             transform: isAnimating ? "translateY(-100%)" : "translateY(0%)",
             opacity: isAnimating ? 0 : 1,
@@ -50,7 +50,7 @@ const MotoStrip = ({ isDarkMode }) => {
       {/* Current Motto */}
       <p
         key={`curr-${index}`}
-        className="absolute inset-0 flex items-center justify-center text-lg sm:text-xl md:text-2xl italic font-bold transition-all duration-500 ease-in-out"
+        className="absolute inset-0 px-3 text-center flex items-center justify-center text-sm sm:text-xl md:text-2xl italic font-bold transition-all duration-500 ease-in-out"
         style={{
           transform: isAnimating ? "translateY(100%)" : "translateY(0%)",
           opacity: isAnimating ? 0 : 1,

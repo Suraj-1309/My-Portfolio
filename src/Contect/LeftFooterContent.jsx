@@ -65,11 +65,11 @@ const LeftFooterContent = ({ isDarkMode }) => {
   ];
 
   return (
-    <div className="max-w-md  ml-4"> {/* 👈 Slight shift to the right */}
+    <div className="max-w-md w-full ml-0">
       <h2
         className={`text-3xl sm:text-5xl font-bold mb-2 ${
           isDarkMode ? "text-white" : "text-black"
-        } text-left pl-8`}
+        } text-left pl-0 sm:pl-2`}
       >
         Get in Touch
       </h2>
@@ -77,7 +77,7 @@ const LeftFooterContent = ({ isDarkMode }) => {
       <p
         className={`text-xl font-medium mb-4 ${
           isDarkMode ? "text-black" : "text-black"
-        } text-left pl-8`}
+        } text-left pl-0 sm:pl-2`}
       >
         Contact Information
       </p>
@@ -95,8 +95,10 @@ const LeftFooterContent = ({ isDarkMode }) => {
                 : "text-black hover:text-orange-500"
             }`}
           >
-            <span className="text-2xl">{link.icon}</span>
-            <span>{link.label}</span>
+            <span className="text-xl sm:text-2xl shrink-0">{link.icon}</span>
+            <span className="break-all text-sm sm:text-base text-left">
+              {link.label}
+            </span>
           </a>
         ))}
       </div>

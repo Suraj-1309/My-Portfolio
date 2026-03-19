@@ -15,7 +15,6 @@ import {
 import { FaDatabase } from "react-icons/fa6";
 import SkillsHeaderCard from "./SkillHeader";
 
-
 import LanguagesSkill from "./LanguagesSkill";
 
 export default function Skills({ isDarkMode }) {
@@ -393,11 +392,6 @@ export default function Skills({ isDarkMode }) {
   };
   const Aitools = [AitoolJupyter];
 
-
-
-
-
-  
   return (
     <>
       {/* Skills Header Card */}
@@ -405,11 +399,9 @@ export default function Skills({ isDarkMode }) {
       {/* Languages heading */}
       <LanguagesSkill isDarkMode={isDarkMode} />
 
-
-
       {/* Web Development heading */}
       <div
-        className={`flex items-center gap-2 px-8 pt-8 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
+        className={`flex items-center gap-2 px-4 sm:px-6 lg:px-8 pt-8 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
           isDarkMode ? "text-blue-400" : "text-orange-500"
         }`}
       >
@@ -417,8 +409,8 @@ export default function Skills({ isDarkMode }) {
         <span>Frontend Technologies</span>
       </div>
       {/* Skill Cards Grid */}
-      <div className="w-full px-8 pb-8">
-        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8 pb-8">
+        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6 sm:gap-y-8">
           {frontendSkills.map((lang, index) => (
             <SkillCard
               key={index}
@@ -437,7 +429,7 @@ export default function Skills({ isDarkMode }) {
 
       {/* Database heading */}
       <div
-        className={`flex items-center gap-2 px-8 pt-8 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
+        className={`flex items-center gap-2 px-4 sm:px-6 lg:px-8 pt-8 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
           isDarkMode ? "text-blue-400" : "text-orange-500"
         }`}
       >
@@ -445,8 +437,8 @@ export default function Skills({ isDarkMode }) {
         <span>Database Technologies</span>
       </div>
       {/* Skill Cards Grid */}
-      <div className="w-full px-8 pb-8">
-        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8 pb-8">
+        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6 sm:gap-y-8">
           {databaseSkills.map((lang, index) => (
             <SkillCard
               key={index}
@@ -465,7 +457,7 @@ export default function Skills({ isDarkMode }) {
 
       {/* Tools & Technologies heading */}
       <div
-        className={`flex items-center gap-2 px-8 pt-8 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
+        className={`flex items-center gap-2 px-4 sm:px-6 lg:px-8 pt-8 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
           isDarkMode ? "text-blue-400" : "text-orange-500"
         }`}
       >
@@ -473,8 +465,8 @@ export default function Skills({ isDarkMode }) {
         <span>Tools & Technologies</span>
       </div>
       {/* Skill Cards Grid */}
-      <div className="w-full px-8 pb-8">
-        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8 pb-8">
+        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6 sm:gap-y-8">
           {Tools.map((lang, index) => (
             <SkillCard
               key={index}
@@ -493,17 +485,17 @@ export default function Skills({ isDarkMode }) {
 
       {/*AI  Tools & Technologies heading */}
       <div
-        className={`flex items-center gap-2 px-8 pt-8 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
+        className={`flex items-center gap-2 px-4 sm:px-6 lg:px-8 pt-8 pb-4 font-bold text-xl sm:text-2xl tracking-wide ${
           isDarkMode ? "text-blue-400" : "text-orange-500"
         }`}
       >
         <VscCopilot className="h-6 w-6 sm:h-7 sm:w-7" />
         <span>AI Tools</span>
       </div>
-      
+
       {/* Skill Cards Grid */}
-      <div className="w-full px-8 pb-8">
-        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8 pb-8">
+        <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6 sm:gap-y-8">
           {Aitools.map((lang, index) => (
             <SkillCard
               key={index}

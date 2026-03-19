@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 
 export default function NavSection({ isDarkMode, toggleDarkMode }) {
   const location = useLocation();
-  const isDesktop = useMediaQuery({ minWidth: 768 });
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
@@ -34,22 +34,22 @@ export default function NavSection({ isDarkMode, toggleDarkMode }) {
         ${isDarkMode ? "bg-black" : "bg-white"}
       `}
     >
-      <div className="container mx-auto flex justify-between items-center relative">
+      <div className="mx-auto w-full max-w-screen-2xl flex justify-between items-center relative px-1 sm:px-2 lg:px-4">
         {/* Logo/Name */}
-        <span className="font-cabinet font-semibold text-lg drop-shadow-md text-gray-700 dark:text-gray-200">
+        <span className="font-cabinet font-semibold text-sm sm:text-base lg:text-lg drop-shadow-md text-gray-700 dark:text-gray-200 pr-2 truncate">
           Suraj Portfolio
         </span>
 
         {/* Desktop Menu */}
         {isDesktop ? (
-          <div className="flex items-center space-x-8">
-            <ul className="flex items-center space-x-8">
+          <div className="flex items-center space-x-4 xl:space-x-6">
+            <ul className="flex items-center space-x-4 xl:space-x-6">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <HashLink
                     smooth
                     to={link.href}
-                    className={`relative font-semibold cursor-pointer transition-colors duration-300 ${
+                    className={`relative text-sm xl:text-base font-semibold cursor-pointer transition-colors duration-300 ${
                       isActive(link.href)
                         ? "text-orange-500"
                         : "text-gray-500 hover:text-orange-500 dark:text-gray-200 dark:hover:text-orange-500"
@@ -110,7 +110,7 @@ export default function NavSection({ isDarkMode, toggleDarkMode }) {
                 fixed top-0 left-0 w-full h-screen bg-white dark:bg-gray-900 shadow-lg
                 transition-transform duration-500 ease-in-out transform
                 ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}
-                p-6 flex flex-col items-start justify-start
+                p-5 sm:p-6 flex flex-col items-start justify-start
               `}
             >
               {/* Close button for mobile */}
@@ -134,13 +134,13 @@ export default function NavSection({ isDarkMode, toggleDarkMode }) {
                 </svg>
               </button>
 
-              <ul className="flex flex-col mt-16 space-y-4">
+              <ul className="flex flex-col mt-16 space-y-5">
                 {navLinks.map((link) => (
                   <li key={link.name}>
                     <HashLink
                       smooth
                       to={link.href}
-                      className={`text-xl font-semibold cursor-pointer transition-colors duration-300 ${
+                      className={`text-xl sm:text-2xl font-semibold cursor-pointer transition-colors duration-300 ${
                         isActive(link.href)
                           ? "text-orange-500"
                           : "text-gray-700 hover:text-orange-500 dark:text-gray-200 dark:hover:text-orange-500"

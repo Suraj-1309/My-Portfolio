@@ -28,7 +28,7 @@ const Projects = ({ isDarkMode }) => {
   return (
     <div>
       {/* for Webdev projects  */}
-        {/* Left Section */}
+      {/* Left Section */}
       <div className="px-4 md:px-8 py-2 pb-4 ">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide mb-2">
           My Projects
@@ -76,7 +76,7 @@ const Projects = ({ isDarkMode }) => {
         </div>
       </div>
 
-      {/* for AI projects 
+      {/* for AI projects */}
       <div className="px-4 md:px-8 py-2 pt-6 relative">
         <div className="flex justify-between items-center mb-6">
           <div
@@ -85,38 +85,12 @@ const Projects = ({ isDarkMode }) => {
             }`}
           >
             <GoCopilot className="h-5 w-5 sm:h-10 sm:w-10" />
-            <span>Web Development Projects</span>
-          </div>
-
-          <div className="flex gap-2">
-            <button
-              onClick={scrollLeft}
-              className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition"
-            >
-              <FaChevronLeft />
-            </button>
-            <button
-              onClick={scrollRight}
-              className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition"
-            >
-              <FaChevronRight />
-            </button>
+            <span>AI Projects</span>
           </div>
         </div>
 
-        <div className="overflow-x-auto scrollbar-hide" ref={scrollRef}>
-          {/* <div className="flex gap-6 w-max">
-            {ProjectsData.map((project, i) => (
-              <div
-                key={i}
-                className="min-w-[80vw] sm:min-w-[65vw] md:min-w-[25vw] max-w-[30vw] flex-shrink-0 pr-10"
-              >
-                <ProjectsCard data={project} isDarkMode={isDarkMode} />
-              </div>
-            ))}
-          </div> */}
-
-      {/* <h1
+        <div className="overflow-x-auto scrollbar-hide">
+          <h1
             className={`px-4 py-4 sm:py-10 font-extrabold text-xl sm:text-3xl md:text-4xl text-center text-gray-200 dark:text-gray-500`}
           >
             Currently No Project to show in this field
@@ -174,11 +148,12 @@ const Projects = ({ isDarkMode }) => {
       {/* End Message & Button */}
       <div className="text-center mt-6 px-4 sm:py-10">
         <p className="text-base sm:text-base text-gray-700 dark:text-gray-300">
-            Above I mention all the projects which I think are suitable to mention in my portfolio I am still working on my new project.{"\n"} if you have any idea or work do contact me. 
-
+          Above I mention all the projects which I think are suitable to mention
+          in my portfolio I am still working on my new project.{"\n"} if you
+          have any idea or work do contact me.
         </p>
         <p className="text-base sm:text-base text-gray-700 dark:text-gray-300">
-           I would like to contribute in your porject if you like. 🤗
+          I would like to contribute in your porject if you like. 🤗
         </p>
       </div>
     </div>

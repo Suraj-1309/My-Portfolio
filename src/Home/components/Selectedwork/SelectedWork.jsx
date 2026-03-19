@@ -18,7 +18,7 @@ import Pick3 from "./selected_pic/pick_manga3.webp";
 
 // Example data (replace with real data)
 const selectedWorks = [
-  // GPIMS 
+  // GPIMS
   {
     image: GpimsHomePage,
     heading: "GPIMS",
@@ -87,7 +87,7 @@ const selectedWorks = [
     link: "https://gpmis.infy.uk/",
   },
 
-  // pick Manga 
+  // pick Manga
   {
     image: PickHome,
     heading: "Pick Manga",
@@ -95,27 +95,27 @@ const selectedWorks = [
     createdFor: "Manga Suggestion",
     gallery: [PickHome, Pick1, Pick2, Pick3],
     details: [
-  {
-    title: "Overview",
-    text: "Pick Manga is a website Using code programming tachnology for frontend , it a engaging and highly animated website it is manly based on giving suggestion for one short mangas which are most popular among the community."
-  },
-  {
-    title: "Tech Stack",
-    text: `- HTML
+      {
+        title: "Overview",
+        text: "Pick Manga is a website Using code programming tachnology for frontend , it a engaging and highly animated website it is manly based on giving suggestion for one short mangas which are most popular among the community.",
+      },
+      {
+        title: "Tech Stack",
+        text: `- HTML
     - Pure CSS
     - Javascript`,
-  },
-  {
-    title: "Features: ",
-    text: `- 10 Webpages which change on swipping and buttons
+      },
+      {
+        title: "Features: ",
+        text: `- 10 Webpages which change on swipping and buttons
     - animation on each component from different sides 
     - dynamic and responsive for various device screens`,
-  },
-],
+      },
+    ],
     link: "https://suraj-1309.github.io/My-web-dev-pages/manga_review/index.html",
   },
 
-  // one home 
+  // one home
   {
     image: OneHome,
     heading: "One Piece Doc",
@@ -147,14 +147,14 @@ const selectedWorks = [
 const SelectedWork = ({ isDarkMode }) => {
   return (
     <>
-      <div className="flex items-center gap-6 text-orange-500 font-bold text-lg sm:text-xl tracking-wide mt-8">
+      <div className="flex items-center gap-3 sm:gap-6 text-orange-500 font-bold text-base sm:text-xl tracking-wide mt-8">
         {/* Bookmark SVG icon */}
-        <FaDesktop />
+        <FaDesktop className="text-xl sm:text-2xl" />
         {/* Text */}
         <span>SELECTED WORK TILL JULY 2025</span>
       </div>
       <section className="py-4">
-        <div className="grid gap-4 grid-cols-1  md:grid-cols-3 place-items-center whitespace-pre-line">
+        <div className="grid gap-4 sm:gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-stretch whitespace-pre-line">
           {selectedWorks.map((work, index) => (
             <SelectedWorkCard key={index} work={work} isDarkMode={isDarkMode} />
           ))}

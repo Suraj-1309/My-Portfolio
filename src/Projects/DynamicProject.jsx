@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import ProjectsData from "./ProjectsData";
 
@@ -35,6 +35,103 @@ const DynamicProject = ({ id: propId }) => {
     sourceCodeLink,
     projectViewLink,
   } = data;
+  const [activeImageIndex, setActiveImageIndex] = useState(null);
+  const [isImageViewerVisible, setIsImageViewerVisible] = useState(false);
+  const closeTimerRef = useRef(null);
+  const isImageViewerOpen = activeImageIndex !== null;
+
+  const openImageViewer = (index) => {
+    if (closeTimerRef.current) {
+      window.clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+    setIsImageViewerVisible(false);
+    setActiveImageIndex(index);
+  };
+
+  const closeImageViewer = () => {
+    setIsImageViewerVisible(false);
+
+    if (closeTimerRef.current) {
+      window.clearTimeout(closeTimerRef.current);
+    }
+
+    closeTimerRef.current = window.setTimeout(() => {
+      setActiveImageIndex(null);
+      closeTimerRef.current = null;
+    }, 260);
+  };
+
+  const showPreviousImage = (event) => {
+    event?.stopPropagation();
+    setActiveImageIndex((prev) =>
+      prev === null ? 0 : (prev - 1 + images.length) % images.length,
+    );
+  };
+
+  const showNextImage = (event) => {
+    event?.stopPropagation();
+    setActiveImageIndex((prev) =>
+      prev === null ? 0 : (prev + 1) % images.length,
+    );
+  };
+
+  const handleImageKeyDown = (event, index) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openImageViewer(index);
+    }
+  };
+
+  useEffect(() => {
+    if (!isImageViewerOpen) {
+      return;
+    }
+
+    const animationFrame = window.requestAnimationFrame(() => {
+      setIsImageViewerVisible(true);
+    });
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame);
+    };
+  }, [isImageViewerOpen]);
+
+  useEffect(() => {
+    return () => {
+      if (closeTimerRef.current) {
+        window.clearTimeout(closeTimerRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isImageViewerOpen) {
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        closeImageViewer();
+      }
+      if (event.key === "ArrowLeft") {
+        showPreviousImage();
+      }
+      if (event.key === "ArrowRight") {
+        showNextImage();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isImageViewerOpen, images.length]);
 
   const FancyButton = ({ text, link }) => (
     <a
@@ -161,7 +258,12 @@ const DynamicProject = ({ id: propId }) => {
         {images.map((img, i) => (
           <div
             key={i}
-            className="w-full h-48 md:h-44 lg:h-48 xl:h-52 overflow-hidden rounded-xl shadow-md border border-gray-200 dark:border-gray-600"
+            className="w-full h-48 md:h-44 lg:h-48 xl:h-52 overflow-hidden rounded-xl shadow-md border border-gray-200 dark:border-gray-600 cursor-zoom-in"
+            onClick={() => openImageViewer(i)}
+            onKeyDown={(event) => handleImageKeyDown(event, i)}
+            role="button"
+            tabIndex={0}
+            aria-label={`Open screenshot ${i + 1}`}
           >
             <img
               src={img}
@@ -171,6 +273,79 @@ const DynamicProject = ({ id: propId }) => {
           </div>
         ))}
       </div>
+
+      {isImageViewerOpen && (
+        <div
+          className="fixed inset-0 z-[200] w-screen min-h-screen overflow-hidden"
+          style={{ height: "100dvh" }}
+        >
+          <div
+            className={`absolute inset-0 bg-slate-950/90 backdrop-blur-md transition-opacity duration-300 ${
+              isImageViewerVisible ? "opacity-100" : "opacity-0"
+            }`}
+            onClick={closeImageViewer}
+          />
+
+          <button
+            onClick={(event) => {
+              event.stopPropagation();
+              closeImageViewer();
+            }}
+            className={`absolute top-3 right-3 sm:top-5 sm:right-5 z-30 text-white text-2xl sm:text-3xl bg-black/50 hover:bg-black/70 border border-white/30 rounded-full w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center shadow-xl transition-all duration-300 ${
+              isImageViewerVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 -translate-y-2"
+            }`}
+            aria-label="Close image viewer"
+          >
+            ×
+          </button>
+
+          <div className="absolute inset-0 flex items-center justify-center px-3 sm:px-6 md:px-10 py-6 sm:py-8 pointer-events-none">
+            <button
+              onClick={showPreviousImage}
+              className={`pointer-events-auto absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-30 text-white text-2xl sm:text-3xl bg-black/55 hover:bg-black/75 border border-white/30 rounded-full w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.45)] transition-all duration-300 ${
+                isImageViewerVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-2"
+              }`}
+              aria-label="Show previous image"
+            >
+              ‹
+            </button>
+
+            <div
+              className={`pointer-events-auto relative w-full max-w-[1200px] transition-all duration-300 ${
+                isImageViewerVisible
+                  ? "opacity-100 scale-100 translate-y-0"
+                  : "opacity-0 scale-95 translate-y-2"
+              }`}
+              onClick={(event) => event.stopPropagation()}
+            >
+              <img
+                src={images[activeImageIndex]}
+                alt={`fullscreen-screenshot-${activeImageIndex}`}
+                className="mx-auto max-h-[76dvh] sm:max-h-[82dvh] w-auto max-w-full rounded-2xl object-contain shadow-[0_20px_60px_rgba(0,0,0,0.55)]"
+              />
+              <p className="mt-3 text-center text-sm sm:text-base font-medium tracking-wide text-white/90">
+                {activeImageIndex + 1} / {images.length}
+              </p>
+            </div>
+
+            <button
+              onClick={showNextImage}
+              className={`pointer-events-auto absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-30 text-white text-2xl sm:text-3xl bg-black/55 hover:bg-black/75 border border-white/30 rounded-full w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.45)] transition-all duration-300 ${
+                isImageViewerVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-2"
+              }`}
+              aria-label="Show next image"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

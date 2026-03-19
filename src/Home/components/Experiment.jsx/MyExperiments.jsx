@@ -31,13 +31,16 @@ const MyExperiments = ({ isDarkMode }) => {
   ];
 
   return (
-    <div className="flex flex-col gap-6 py-6">
+    <div className="flex flex-col gap-4 sm:gap-6 py-3 sm:py-6">
       <h1
-        className={`text-2xl font-bold flex items-center gap-2 ${
+        className={`text-xl sm:text-2xl font-bold flex items-center gap-2 ${
           isDarkMode ? "text-blue-500" : "text-orange-500"
         }`}
       >
-        <span><FaFlask className="text-4xl" /></span> EXPERIMENTS AREA
+        <span>
+          <FaFlask className="text-2xl sm:text-4xl" />
+        </span>{" "}
+        EXPERIMENTS AREA
       </h1>
       {experiments.map((exp, i) => (
         <ExperimentCard key={i} {...exp} isDarkMode={isDarkMode} />

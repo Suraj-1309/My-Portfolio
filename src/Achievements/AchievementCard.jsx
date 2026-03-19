@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import FakePage from "./FakePage";
 import SeeMoreCard from "./SeeMoreCard";
 
-
 export default function AchievementCard({ icon, title, points, isDarkMode }) {
   const [showModal, setShowModal] = useState(false);
   const [activeArticle, setActiveArticle] = useState(null); // article content for FakePage
@@ -37,7 +36,7 @@ export default function AchievementCard({ icon, title, points, isDarkMode }) {
 
   return (
     <>
-      <div className="w-[94vw] -ml-[8vw] sm:w-full sm:ml-0">
+      <div className="w-full">
         <div
           className={`w-full p-4 sm:p-6 font-sans border-b sm:border rounded-none sm:rounded-2xl transition-all duration-300 shadow-md ${cardBaseStyle}`}
         >
@@ -49,7 +48,9 @@ export default function AchievementCard({ icon, title, points, isDarkMode }) {
           <ul className="list-disc list-inside space-y-2 text-sm">
             {visiblePoints.map((pointObj, index) => (
               <li key={index} className="flex items-start justify-between">
-                <span className="list-item list-disc list-inside">{pointObj.point}</span>
+                <span className="list-item list-disc list-inside">
+                  {pointObj.point}
+                </span>
 
                 <span onClick={() => setActiveArticle(pointObj.article)}>
                   {ArrowIcon()}

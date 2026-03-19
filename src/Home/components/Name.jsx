@@ -86,10 +86,8 @@ const AnimatedText = ({ text, isDarkMode }) => {
   // Tailwind CSS classes for each character.
   const letterClasses =
     "inline-block drop-shadow-sm text-nowrap align-baseline font-cabinet " +
-    "text-[80px] leading-none tracking-tighter " + // Base/mobile font size
-    "sm:text-[100px] " + // Slightly larger on small screens
-    "md:text-9xl " + // Medium screens (128px)
-    "lg:text-[180px] " + // Large screens (180px)
+    "text-[clamp(2.9rem,13vw,11rem)] leading-none tracking-tight " +
+    "sm:tracking-tighter " +
     "font-semibold " + // Consolidated font-weight - apply once
     "py-0.5 px-0.5 " + // Adjusted: Base/mobile padding (reduced px to px-0.5)
     "sm:py-0.5 sm:px-1 " + // Adjusted: Small screens padding
@@ -126,8 +124,8 @@ const AnimatedText = ({ text, isDarkMode }) => {
               activeIndex === index
                 ? "bg-orange-500 text-white"
                 : isDarkMode
-                ? "text-white"
-                : ""
+                  ? "text-white"
+                  : ""
             }`}
             onClick={(event) => handleLetterClick(index, event)}
             // Attach ref to the 'j' letter. For "suraj.", 'j' is at index 4 (0-indexed)
@@ -140,18 +138,16 @@ const AnimatedText = ({ text, isDarkMode }) => {
 
       {/* Greeting message container */}
       <div
-        className={`absolute font-semibold shadow-lg transition-opacity duration-500
+        className={`hidden sm:block absolute font-semibold shadow-lg transition-opacity duration-500
     rounded-[50px] 
-    px-3 py-2 text-xl   /* mobile default size */
-    sm:px-5 sm:py-3 sm:text-lg /* larger size on sm and up */
+    px-3 py-2 text-base
+    sm:px-4 sm:py-2 sm:text-base
+    md:px-5 md:py-3 md:text-lg
     text-white
     ${isDarkMode ? "bg-blue-400" : "bg-orange-500"}`}
         style={{
           top: greetingPosition.top + 20,
-          left:
-            window.innerWidth < 640 // Tailwind's "sm" breakpoint
-              ? greetingPosition.left + 40 // more to the left on mobile
-              : greetingPosition.left + 100, // normal on desktop
+          left: greetingPosition.left + 70,
           whiteSpace: "nowrap",
           zIndex: 20,
         }}

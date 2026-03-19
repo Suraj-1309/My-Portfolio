@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import FakeSkillArticle from "./FakeSkillArticle";
 
-
 export default function SkillCard({
   leftIcon,
   rightIcon,
@@ -27,7 +26,7 @@ export default function SkillCard({
   return (
     <>
       <div
-        className={`relative w-full sm:w-[400px] rounded-2xl shadow-md p-4 sm:p-4 flex flex-col gap-2 transition-all duration-300 hover:scale-[1.08] ${cardBaseStyle} ${borderColor}`}
+        className={`relative w-full max-w-[400px] mx-auto rounded-2xl shadow-md p-4 sm:p-4 flex flex-col gap-2 transition-all duration-300 hover:scale-[1.03] ${cardBaseStyle} ${borderColor}`}
       >
         {/* Top row: Left icon + title + right icon */}
         <div className="flex items-center justify-between">

@@ -30,17 +30,15 @@ const Home = ({ isDarkMode }) => {
         {" "}
         {/* First Column for the Name */}
         <div className="order-2 md:order-1">
-          <div className="pt-4 sm:pt-8 sm:pl-0 pl-2">
+          <div className="pt-2 sm:pt-6 pl-1 sm:pl-0">
             {" "}
             {/* Keep name slightly above */}
             <AnimatedText text="suraj." isDarkMode={isDarkMode} />
           </div>
         </div>
         {/* Second Column for Activate CLI Button */}
-        <div className="order-2 md:order-2 pb-8">
-          <div
-            className={` pb-4 sm:p-4 `} // Card styling
-          >
+        <div className="order-1 md:order-2 pb-2 sm:pb-6">
+          <div className="pb-2 sm:p-2 md:p-4">
             <CliButton toggleCli={toggleCli} isDarkMode={isDarkMode} />
           </div>
         </div>
@@ -58,11 +56,11 @@ const Home = ({ isDarkMode }) => {
           <AboutCard isDarkMode={isDarkMode} />
         </div>
         {/* Column 2 Placeholder */}
-        <div className={`sm:w-[calc(100%-40px)] pt-8 sm:pt-0 sm:m-8 lg:-mt-8`}>
+        <div className="w-full pt-4 sm:pt-0 sm:px-2 lg:px-4">
           <ProfileImage isDarkMode={isDarkMode} />
         </div>
         {/* Column 3 Placeholder */}
-        <div className={`w-full sm:-mt-12`}>
+        <div className="w-full mt-2 sm:mt-0">
           <MyExperiments isDarkMode={isDarkMode} />
         </div>
       </div>
@@ -77,12 +75,12 @@ const Home = ({ isDarkMode }) => {
         {/* DSA Heading */}
         <DsaHeading />
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 ">
-          <div className="lg:col-span-2 pt-2 sm:p-4 sm:rounded-2xl shadow-md sm:m-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="lg:col-span-2 pt-2 sm:p-4 sm:rounded-2xl shadow-md sm:mx-4 lg:mx-0">
             <DsaLeft isDarkMode={isDarkMode} />
           </div>
 
-          <div className="hidden lg:flex lg:col-span-1 p-4  flex justify-end items-center">
+          <div className="hidden lg:flex lg:col-span-1 p-2 xl:p-4 justify-end items-center">
             {/* TODO: Add right-side widget or content */}
             <DsaRight isDarkMode={isDarkMode} />
           </div>
@@ -90,7 +88,7 @@ const Home = ({ isDarkMode }) => {
       </div>
 
       {/* MotoStrip Component */}
-      <div className="relative z-0 w-screen">
+      <div className="relative z-0 w-full">
         <MotoStrip isDarkMode={isDarkMode} />
       </div>
 
@@ -117,7 +115,7 @@ const Home = ({ isDarkMode }) => {
           <Contect isDarkMode={isDarkMode} />
 
           {/* World Map Component */}
-          <div className="w-full mt-8 relative z-0">
+          <div className="w-full mt-6 sm:mt-8 relative z-0">
             <WorldMap />
           </div>
 

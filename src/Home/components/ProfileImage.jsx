@@ -1,23 +1,22 @@
 import React from "react";
 import profileImage from "../assets/img.jpeg";
 
-export default function ProfileImage({ isDarkMode }) { 
+export default function ProfileImage({ isDarkMode }) {
   return (
     <div
       className={`
-        relative 
+        relative w-full max-w-[540px] mx-auto
       `}
     >
       <img
         src={profileImage} // IMPORTANT: Replace with the actual path to your image
         alt="Suraj"
-        className={`rounded-3xl object-cover h-full w-full border-4 ${
+        className={`rounded-3xl object-cover aspect-[3/4] sm:aspect-[4/5] h-full w-full border-4 ${
           isDarkMode ? "border-white" : "border-black"
         }`}
       />
 
-      
-      <div className="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded-md flex items-center space-x-1 mb-4 ml-4">
+      <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 bg-black/60 text-white text-[10px] sm:text-xs px-2 py-1 rounded-md flex items-center space-x-1">
         {/* SVG Icon for image */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
