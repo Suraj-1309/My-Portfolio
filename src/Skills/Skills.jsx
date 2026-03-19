@@ -4,14 +4,8 @@ import { FaCode, FaReact } from "react-icons/fa";
 import { MdScreenshotMonitor } from "react-icons/md";
 import { FiTool } from "react-icons/fi";
 import { VscCopilot } from "react-icons/vsc";
-import {
-  SiHtml5,
-  SiCss3,
-  SiMysql,
-  SiMongodb,
-  SiGit,
-  SiJupyter,
-} from "react-icons/si";
+import { SiHtml5, SiMysql, SiMongodb, SiGit, SiJupyter } from "react-icons/si";
+import { TiCss3 } from "react-icons/ti";
 import { FaDatabase } from "react-icons/fa6";
 import SkillsHeaderCard from "./SkillHeader";
 
@@ -79,7 +73,7 @@ export default function Skills({ isDarkMode }) {
       />
     ),
     rightIcon: (
-      <SiCss3
+      <TiCss3
         className={`${
           isDarkMode ? "text-blue-400" : "text-orange-500"
         } text-3xl`}

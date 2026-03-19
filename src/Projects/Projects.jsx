@@ -1,10 +1,12 @@
 import React, { useRef } from "react";
 import ProjectsCard from "./ProjectsCard";
-import ProjectsData from "./ProjectsData";
+import WebProjectsData from "./WebProjectsData";
+import AiProjectData from "./AiProjectsData";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { AiFillAndroid } from "react-icons/ai";
 import { GoCopilot } from "react-icons/go";
 import { TbWorldWww } from "react-icons/tb";
+import { div } from "framer-motion/client";
 
 const Projects = ({ isDarkMode }) => {
   const scrollRef = useRef(null);
@@ -35,6 +37,7 @@ const Projects = ({ isDarkMode }) => {
         </h1>
       </div>
 
+      {/* Web Dev Projects */}
       <div className="px-4 md:px-8 py-2 relative">
         <div className="flex justify-between items-center mb-6">
           <div
@@ -64,7 +67,7 @@ const Projects = ({ isDarkMode }) => {
 
         <div className="overflow-x-auto scrollbar-hide" ref={scrollRef}>
           <div className="flex gap-6 w-max">
-            {ProjectsData.map((project, i) => (
+            {WebProjectsData.map((project, i) => (
               <div
                 key={i}
                 className="min-w-[80vw] sm:min-w-[65vw] md:min-w-[25vw] max-w-[30vw] flex-shrink-0 pr-10"
@@ -90,11 +93,16 @@ const Projects = ({ isDarkMode }) => {
         </div>
 
         <div className="overflow-x-auto scrollbar-hide">
-          <h1
-            className={`px-4 py-4 sm:py-10 font-extrabold text-xl sm:text-3xl md:text-4xl text-center text-gray-200 dark:text-gray-500`}
-          >
-            Currently No Project to show in this field
-          </h1>
+          <div className="flex gap-6 w-max">
+            {AiProjectData.map((project, i) => (
+              <div
+                key={i}
+                className="min-w-[80vw] sm:min-w-[65vw] md:min-w-[25vw] max-w-[30vw] flex-shrink-0 pr-10"
+              >
+                <ProjectsCard data={project} isDarkMode={isDarkMode} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
