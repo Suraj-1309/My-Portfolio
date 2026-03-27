@@ -3,8 +3,47 @@ import { MdScreenshotMonitor } from "react-icons/md";
 import TicTacToeHome from "./assets/tic_tac_toe2.png";
 import TicTacToe1 from "./assets/tic_tac_toe.png";
 import TicTacToe2 from "./assets/tic_tac_toe1.png";
+import FlappyBird1 from "./assets/flappy_bird1.png";
+import FlappyBird2 from "./assets/flappy_bird2.png";
+import FlappyBird3 from "./assets/flappy_bird3.png";
+import FlappyBridDesign from "./assets/flappy_bird_design.png";
 
 const AiProjectsData = [
+  {
+    id: "2",
+    svg: <MdScreenshotMonitor size={40} />,
+    mainPhoto: FlappyBird1,
+    heading: "AI Flappy Bird",
+    headingText:
+      "AI Flappy Bird is a Neural Network based game where bird learns to fly through pipes using a simple feedforward neural network and Neat-Python algorithm for training.",
+    technologyUsed: ["Python", "Neural Networks", "Neat-Python" ],
+    keyFeatures: [
+      "AI Flappy Bird game using Neural Networks",
+      "Bird learns to fly through pipes using a simple feedforward neural network",
+      "Implemented using Pygame for game development",
+      "Trained using Neat-Python algorithm for evolving neural networks",
+      
+    ],
+    challenges: [
+      "Designing the neural network architecture for the bird's decision-making",
+      "Implementing the game mechanics and physics using Pygame",
+      "Integrating the neural network with the game to control the bird's actions",
+      "Training the AI using Neat-Python and tuning hyperparameters for better performance",
+      "Debugging issues related to game logic, neural network training, and performance optimization"
+    ],
+    achievements: [
+      "Successfully implemented an AI that learns to play Flappy Bird",
+      "Gained hands-on experience with neural networks and evolutionary algorithms",
+      "Developed a complete game using Pygame",
+      "Improved skills in Python programming and AI development",
+      "Created a visually appealing and functional game with AI integration",
+    ],
+    images: [FlappyBird1, FlappyBird2, FlappyBird3, FlappyBridDesign],
+    sourceCodeLink:
+      "https://github.com/Suraj-1309/AI-Flappy-Bird",
+    projectViewLink:
+      "https://github.com/Suraj-1309/AI-Flappy-Bird",
+  },
   {
     id: "1",
     svg: <MdScreenshotMonitor size={40} />,
